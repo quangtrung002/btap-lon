@@ -2,13 +2,13 @@ const data = [
   {
     iphone : [
       {
-        id :"",
-        name : "",
+        id :"1",
+        name : "Iphone",
         image : "",
         title : "",
         price : "",
         button : ""
-      }
+      },
     ]
   },
   {
