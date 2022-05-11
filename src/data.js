@@ -3,7 +3,7 @@ const data = [
     iphone : [
       {
         id :"1",
-        name : "Iphone",
+        name : "Iphone 13",
         image : "",
         title : "",
         price : "",
