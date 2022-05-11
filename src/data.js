@@ -98,5 +98,13 @@ const navbar = [
 ]
 
 const footer = [
-  
+
 ]
+
+
+
+
+
+
+
+
