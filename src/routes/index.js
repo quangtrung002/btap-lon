@@ -10,5 +10,3 @@ const publicRoutes = [
   {path : "/khuyen-mai", component : "abc"},
   {path : "/tra-gop", component : "abc"}
 ]
-
-export default publicRoutes
