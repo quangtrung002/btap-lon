@@ -1,9 +1,12 @@
 import React from 'react'
+import Slider from './slider'
+import clsx from 'clsx'
+import style from "./home.module.scss"
 
 export default function Home() {
   return (
-    <div>
-      home
+    <div className={clsx(style.main)}>
+      <Slider />
     </div>
   )
 }

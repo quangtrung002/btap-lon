@@ -5,7 +5,6 @@ import { navbar } from '../../data'
 import style from "./navbar.module.scss"
 
 function Navbar() {
-  const logo = navbar[0].image
   const [amount, setAmount] = useState(0)
   return (
     <header className={clsx(style.main)}>
@@ -22,7 +21,7 @@ function Navbar() {
               <div className={clsx(style.collapse, "collapse navbar-collapse")} id="navbarSupportedContent">
                 <ul className={clsx(style.navList, "navbar-nav d-flex")}>
                   {navbar.map(item => (
-                    <li className={clsx(style.navItem, "nav-item flex-fill d-flex justify-content-center align-items-center")}>
+                    <li className={clsx(style.navItem, "nav-item flex-fill d-flex justify-content-center align-items-center")} key = {item.id}>
                       <Link to={item.path} className={clsx(style.navLink, "nav-link active ")} aria-current="page" href="#">{item.name}</Link>
                     </li>
                   ))}

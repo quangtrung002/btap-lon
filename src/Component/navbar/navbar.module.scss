@@ -14,6 +14,10 @@
 }
 
 .main {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
   background-color: var(--background-navbar);
   height: var(--height-navbar);
 
@@ -35,24 +39,25 @@
 
 .navList {
   width: 100%;
-}
 
-.navItem {
-  text-transform: capitalize;
-
-  &:hover {
-    background-color: #3f3f3f;
-  }
-
-  .navLink {
-    color: var(--color-navbar) !important;
-    font-size: var(--font-size-navbar);
+  .navItem {
+    text-transform: capitalize;
 
     &:hover {
-      color: var(--color-white);
+      background-color: #3f3f3f;
+    }
+
+    .navLink {
+      color: var(--color-navbar) !important;
+      font-size: var(--font-size-navbar);
+
+      &:hover {
+        color: var(--color-white);
+      }
     }
   }
 }
+
 
 .iconSearch,
 .iconBag {

@@ -1,0 +1,40 @@
+:root{
+  --color-white : #fff;
+  --color-black : #000;
+  --bg-btn : #ccc;
+  --bg-btn-hover : #515154 ;
+}
+
+.main {
+  height: 2000px;
+  .dotSlider {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    margin: 0 6px !important;
+    background-color: #c2c2c6;
+  }
+
+  .dotActive {
+    background-color: #000;
+  }
+
+  .btnSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    color: var(--color-white);
+    background-color: var(--bg-btn);
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+    &:hover{
+      background-color: var(--bg-btn-hover);
+    }
+  }
+}
