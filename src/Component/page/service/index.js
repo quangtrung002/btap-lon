@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Mac() {
+export default function Service() {
   return (
     <div>
-      Mac
+      service
     </div>
   )
 }
