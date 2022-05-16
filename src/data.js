@@ -35,6 +35,40 @@ const data = [
         Capacity: ["64GB","128GB","256GB"],
         color : ["White","Black","Yellow","Green","Purple","(PRODUCT) RED"]
       },
+      {
+        id :"5",
+        name : "iPhone 13 mini",
+        image : "https://s165.convertio.me/p/jiFC0hGMcm6scfOhCxvMng/e081324d4d34cb540c26d91bfc0a70d6/ip13mini-1.webp",
+        price : "18.590.000",
+        Capacity: ["128GB","256GB","512GB"],
+        color : ["Alpine Green","Midnight","Starlight","Blue","(PRODUCT) RED","Pink"]
+      },
+      {
+        id :"6",
+        name : "iPhone 13 Pro",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/04/ip13pro-1.png",
+        price : "26.990.000",
+        Capacity: ["128GB","256GB","512GB","1TB"],
+        color : ["Alpine Green","Sierra Blue","Graphite","Silver","Gold"]
+      },
+      {
+        id :"7",
+        name : "iPhone 12 mini",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/04/ip12mini.png",
+        price : "14.950.000",
+        Capacity: ["64GB","128GB","256GB"],
+        color : ["White","Black","Blue","Green","Purple","(PRODUCT) RED"]
+      },
+      {
+        id :"8",
+        name : "iPhone SE (2022)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/04/ipse.png",
+        price : "11.990.000",
+        Capacity: ["64GB","128GB","256GB"],
+        color : ["Midnight","Starlight","Blue","(PRODUCT) RED"]
+      },
+
+
     ]
   },
   {
