@@ -6,7 +6,7 @@ const data = [
       {
         id :"1",
         name : "Iphone 13 Pro Max",
-        image : "https://s110.convertio.me/p/5UFSWWG8evo_SwlA7wdAUw/e081324d4d34cb540c26d91bfc0a70d6/iPhone-13-pro-max.jpg",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13-pro-max.png",
         price : "29.290.000",
         Capacity: ["128GB","256GB","512GB","1TB"],
         color : ["Alpine Green","Sierra Blue","Graphite","Silver","Gold"]
@@ -14,7 +14,7 @@ const data = [
       {
         id :"2",
         name : "Iphone 13",
-        image : "https://s165.convertio.me/p/Ua0SBhn3k_6-11PBqRVnLg/e081324d4d34cb540c26d91bfc0a70d6/iPhone-13.jpg",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13.png",
         price : "19.990.000",
         Capacity: ["128GB","256GB","512GB"],
         color : ["Alpine Green","Midnight","Starlight","Blue","(PRODUCT) RED","Pink"]
@@ -22,7 +22,7 @@ const data = [
       {
         id :"3",
         name : "Iphone 12",
-        image : "https://s135.convertio.me/p/N2olYZ-HNRaUrhiRbRCzRQ/e081324d4d34cb540c26d91bfc0a70d6/iPhone-12-xanh.jpg",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-12-xanh.png",
         price : "16.190.000",
         Capacity: ["64GB","128GB","256GB"],
         color : ["White","Black","Blue","Green","Purple","(PRODUCT) RED"]
@@ -30,7 +30,7 @@ const data = [
       {
         id :"4",
         name : "Iphone 11",
-        image : "https://s164.convertio.me/p/VGLlzDEWjttFlrfa39uwPQ/e081324d4d34cb540c26d91bfc0a70d6/iPhone-11-Green.jpg",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-11-Green.png",
         price : "11.690.000",
         Capacity: ["64GB","128GB","256GB"],
         color : ["White","Black","Yellow","Green","Purple","(PRODUCT) RED"]
@@ -38,7 +38,7 @@ const data = [
       {
         id :"5",
         name : "iPhone 13 mini",
-        image : "https://s165.convertio.me/p/jiFC0hGMcm6scfOhCxvMng/e081324d4d34cb540c26d91bfc0a70d6/ip13mini-1.webp",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ip13mini-1.png",
         price : "18.590.000",
         Capacity: ["128GB","256GB","512GB"],
         color : ["Alpine Green","Midnight","Starlight","Blue","(PRODUCT) RED","Pink"]
@@ -46,7 +46,7 @@ const data = [
       {
         id :"6",
         name : "iPhone 13 Pro",
-        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/04/ip13pro-1.png",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ip13pro-1.png",
         price : "26.990.000",
         Capacity: ["128GB","256GB","512GB","1TB"],
         color : ["Alpine Green","Sierra Blue","Graphite","Silver","Gold"]
@@ -54,7 +54,7 @@ const data = [
       {
         id :"7",
         name : "iPhone 12 mini",
-        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/04/ip12mini.png",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ip12mini.png",
         price : "14.950.000",
         Capacity: ["64GB","128GB","256GB"],
         color : ["White","Black","Blue","Green","Purple","(PRODUCT) RED"]
@@ -62,13 +62,11 @@ const data = [
       {
         id :"8",
         name : "iPhone SE (2022)",
-        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/04/ipse.png",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ipse.png",
         price : "11.990.000",
         Capacity: ["64GB","128GB","256GB"],
         color : ["Midnight","Starlight","Blue","(PRODUCT) RED"]
       },
-
-
     ]
   },
   {
@@ -110,6 +108,24 @@ const data = [
         Capacity: ["128GB","256GB","512GB","1TB","2TB"],
         color : ["Space Gray","Silver"],
         Model : ["Wi-Fi","Wi-Fi + 5G"]
+      },
+      {
+        id :"5",
+        name : "iPad Air 5",
+        image : "https://s123.convertio.me/p/GdwYqbX0S3giZVJuNyTGdA/e081324d4d34cb540c26d91bfc0a70d6/ipad-air-5.webp",
+        price : "15.390.000",
+        Capacity: ["64GB","256GB"],
+        color : ["Starlight","Space Gray","blue","Purple","Pink"],
+        Model : ["Wi-Fi","Wi-Fi + 5G"]
+      },
+      {
+        id :"6",
+        name : "iPad Air 4",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/03/ipad-air-4.png",
+        price : "14.490.000",
+        Capacity: ["64GB","256GB"],
+        color : ["Space Gray","silver","Green","Sky blue","Pink"],
+        Model : ["Wi-Fi","Wi-Fi + 4G"]
       },
     ]
   },
