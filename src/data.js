@@ -76,7 +76,7 @@ const data = [
       {
         id :"1",
         name : "iPad gen 9 (2021)",
-        image : "https://s134.convertio.me/p/cZjHpgxXg21-XZvflC1Uog/e081324d4d34cb540c26d91bfc0a70d6/ipad-gen-9.jpg",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-gen-9.png",
         price : "8.990.000",
         Capacity: ["64GB","256GB"],
         color : ["Space Gray","Silver"],
@@ -85,7 +85,7 @@ const data = [
       {
         id :"2",
         name : "iPad mini 6 (2021)",
-        image : "https://s165.convertio.me/p/BtYeFnRRNk5pH7gp4OchyQ/e081324d4d34cb540c26d91bfc0a70d6/ipad-mini-6.jpg",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-mini-6.png",
         price : "13.290.000",
         Capacity: ["64GB","256GB"],
         color : ["Starlight","Space Gray","Purple","Pink"],
@@ -94,7 +94,7 @@ const data = [
       {
         id :"3",
         name : "iPad Pro 11 inch (M1, 2021)",
-        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2021/11/ipad-pro-m1-11-768x768-1.webp",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1-11-768x768-1.webp",
         price : "19.950.000",
         Capacity: ["128GB","256GB","512GB","1TB","2TB"],
         color : ["Space Gray","Silver"],
@@ -103,7 +103,7 @@ const data = [
       {
         id :"4",
         name : "iPad Pro 12.9 inch (M1, 2021)",
-        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
         price : "24.990.000",
         Capacity: ["128GB","256GB","512GB","1TB","2TB"],
         color : ["Space Gray","Silver"],
@@ -112,7 +112,7 @@ const data = [
       {
         id :"5",
         name : "iPad Air 5",
-        image : "https://s123.convertio.me/p/GdwYqbX0S3giZVJuNyTGdA/e081324d4d34cb540c26d91bfc0a70d6/ipad-air-5.webp",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
         price : "15.390.000",
         Capacity: ["64GB","256GB"],
         color : ["Starlight","Space Gray","blue","Purple","Pink"],
@@ -121,7 +121,7 @@ const data = [
       {
         id :"6",
         name : "iPad Air 4",
-        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-8a81e75/wp-content/uploads/2022/03/ipad-air-4.png",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-air-4.png",
         price : "14.490.000",
         Capacity: ["64GB","256GB"],
         color : ["Space Gray","silver","Green","Sky blue","Pink"],
