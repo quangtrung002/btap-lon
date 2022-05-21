@@ -1,6 +1,7 @@
 import './App.css';
 import Contact from './Component/contact';
 import Container from './Component/container';
+import Footer from './Component/footer';
 import Navbar from './Component/navbar';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Container />
       <Contact />
+      <Footer />
     </div>
   );
 }
