@@ -131,14 +131,58 @@ const data = [
   },
   {
     title : "MAC",
+    button: "Xem tất cả iPad >",
     mac : [
       {
-        id :"",
-        name : "",
-        image : "",
-        price : "",
-        button : ""
-      }
+        id :"1",
+        name : "MacBook Pro 14 M1 Pro (14-Core/16GB/512GB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
+        price : "47.990.000",
+        color : ["Space Gray","silver"]
+      },
+      {
+        id :"2",
+        name : "MacBook Pro 14 M1 Pro (16-Core/16GB/1TB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
+        price : "58.990.000",
+        color : ["Space Gray","silver"]
+      },
+      {
+        id :"3",
+        name : "MacBook Air M1 2020",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook-Air-M1-2020.png",
+        price : "23.490.000",
+        color : ["Space Gray","silver","Gold"]
+      },
+      {
+        id :"4",
+        name : "MacBook Pro M1 2020",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook-Pro-M1-2020.png",
+        price : "30.250.000",
+        color : ["Space Gray","silver"]
+      },
+      {
+        id :"5",
+        name : "MacBook Pro 16 M1 Pro (16-Core/32GB/512GB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Silver-1.png",
+        price : "71.950.000",
+        color : ["Space Gray","silver"]
+      },
+      {
+        id :"6",
+        name : "MacBook Pro 16 M1 Pro (16-Core/16GB/1TB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Silver-1.png",
+        price : "64.750.000",
+        color : ["Space Gray","silver"]
+      },
+      {
+        id :"7",
+        name : "MacBook Pro 14 M1 Max",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_14-in_Space-1.png",
+        price : "71.990.000",
+        color : ["Space Gray","silver"],
+        Capacity: [""],
+      },
     ]
   },
   {
