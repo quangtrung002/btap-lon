@@ -32,7 +32,7 @@ function Slider() {
             : <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} aria-label={`Slide ${item.id}`} onClick={() => setSlide(item.id)} className={clsx(style.dotSlider, { [style.dotActive]: slide === item.id })} key={item.id}></button>
         ))}
       </div>
-      <div class="carousel-inner">
+      <div className={clsx(style.slider, "carousel-inner")}>
         {slider.map(item => (
           <div className={clsx("carousel-item", { active: slide === item.id })} key={item.id}>
             <img src={item.image} class="d-block w-100" alt="ảnh lỗi" />
@@ -52,30 +52,3 @@ function Slider() {
 }
 
 export default memo(Slider)
-
-{/* <div id="carouselExampleIndicators" className={clsx(style.slider, "carousel slide")} data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      {slider.map((item, index) => {
-        const resultClass = clsx(style.dotSlider,
-          { active: 1 === item.id },
-          { [style.active]: 1 === item.id }
-        )
-        return <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={resultClass} aria-current="true" aria-label={`Slide ${item.id}`}></button>
-      })}
-    </div>
-    <div className={clsx(style.slides, "carousel-inner")}>
-      {slider.map(item => (
-        <div className={clsx(style.slide, "carousel-item", { active: 1 === item.id })}>
-          <img src={item.image} className={clsx(style.img, "d-block w-100")} alt="..." />
-        </div>
-      ))}
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> */}

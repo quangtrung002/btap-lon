@@ -1,0 +1,235 @@
+:root {
+  --bg-footer: #1d1d1f;
+  --bg-color: #86868B;
+  --color-primary: #D2D2D7;
+  --color-primary-2: #86868B
+}
+
+.footer {
+  background-color: var(--bg-footer);
+  padding: 50px 0;
+
+  .img {
+    img {
+      width: 70%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .description {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 18px 4px 18px 0;
+  }
+
+  .heading::first-letter {
+    text-transform: capitalize;
+  }
+
+  .heading {
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+
+  .footerLg {
+    .footerBottom {
+      border-top: 1px solid #565656;
+
+      .b {
+        flex: 7;
+
+        p {
+          span {
+            color: #565656;
+            text-align: left;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .bc {
+        flex: 3;
+        text-align: right;
+
+        a {
+          img {
+            width: 130px;
+            height: 40px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .list {
+      .item {
+        a {
+          position: relative;
+          color: #86868B;
+          text-decoration: none;
+          padding-bottom: 2px;
+          font-size: 13px;
+          line-height: 28px;
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 1px;
+            width: 0;
+            background-color: #86868B;
+            transition: all .3s linear;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+
+        &::first-letter {
+          text-transform: capitalize;
+
+        }
+      }
+    }
+  }
+
+  .contact {
+    margin: 20px 0 0;
+    line-height: 28px;
+  }
+
+  span {
+    color: #0066cc;
+    font-size: 13px;
+    line-height: 28px;
+    padding-left: 2px;
+  }
+
+  .footerSm {
+    .main {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #d4d4d4;
+      margin-bottom: 15px;
+      font-size: 15px;
+      letter-spacing: .4px;
+
+      .col1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        h1 {
+          color: var(--color-primary);
+          padding: 12px 12px 12px 0;
+          line-height: 1;
+
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+
+        span {
+          transition: transform .3s linear;
+        }
+
+        .active {
+          transition: transform .3s linear;
+          transform: rotate(180deg);
+        }
+      }
+
+      .col2 {
+        color: var(--color-primary);
+        max-height: 0;
+        opacity: 0;
+        transition: all .3s;
+
+        .item {
+          color: #86868B;
+          line-height: 35px;
+          font-size: 15px;
+          padding-left: 24px;
+
+          &::first-letter {
+            text-transform: capitalize;
+          }
+
+          &:last-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .active {
+        opacity: 1;
+        max-height: 100%;
+        transition: opacity .3s, max-height 5s;
+
+      }
+    }
+
+  }
+}
+
+
+
+//responsive
+
+@media (max-width : 767px) {
+
+  .footerSm {
+    .contact {
+      margin: 34px 0 28px 0 !important;
+
+      div {
+        a {
+          img {
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .footerBottom {
+      p {
+        span {
+          color: #565656;
+          text-align: left;
+          font-size: 13px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width : 768px ) and (max-width : 992px) {
+  .footerLg{
+    .img{
+      img{
+        width: 30%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .contact{
+      margin: 0 0 30px 0;
+    }
+  }
+}
