@@ -181,7 +181,84 @@ const data = [
         image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_14-in_Space-1.png",
         price : "71.990.000",
         color : ["Space Gray","silver"],
-        Capacity: [""],
+        Capacity: ["512GB","1TB"],
+        Ram : ["32GB","64GB"],
+        CPU : ["24-core","32-core"]
+      },
+      {
+        id :"8",
+        name : "MacBook Pro 16 M1 Max",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Space_Gray_PDP_Image_Position-1__VN-2-1.png",
+        price : "89.950.000",
+        color : ["Space Gray","silver"],
+        Capacity: ["1TB"],
+        Ram : ["32GB","64GB"],
+        GPU : ["32-core"]
+      },
+      {
+        id :"9",
+        name : "MacBook Pro 16 M1 Pro (16-Core/32GB/512GB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Silver-1.png",
+        price : "71.950.000",
+        color : ["Space Gray","silver"],
+      },
+      {
+        id :"10",
+        name : "MacBook Pro 14 M1 Pro (16-Core/32GB/512GB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
+        price : "63.950.000",
+        color : ["Space Gray","silver"],
+      },
+      {
+        id :"11",
+        name : "MacBook Pro 14 M1 Pro (16-Core/32GB/1TB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
+        price : "72.790.000",
+        color : ["Space Gray","silver"],
+      },
+      {
+        id :"12",
+        name : "MacBook Pro 14 M1 Pro (14-Core/32GB/512GB)",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
+        price : "57.450.000",
+        color : ["Space Gray","silver"],
+      },
+      {
+        id :"13",
+        name : "Studio Display",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/mac-studio-1-removebg-preview-1-1.png",
+        price : "43.990.000",
+        screen : "Standard Glass"
+      },
+      {
+        id :"14",
+        name : "Mac Studio",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/macstudio.png",
+        price : "59.990.000",
+        screen : "Standard Glass",
+        Capacity: ["512GB","1TB"],
+        Ram : ["32GB","64GB"],
+        GPU : ["24-core","48-core"]
+      },
+      {
+        id :"15",
+        name : "iMac M1 2021 24 inch",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/imac-m1-2021.2.png",
+        price : "31.450.000",
+        color : ["Silver","Blue","Green","Pink"],
+        Capacity: ["256GB","512GB"],
+        Ram : ["8GB","16GB"],
+        Chip : ["7-Core GPU","8-Core GPU"]
+      },
+      {
+        id :"16",
+        name : "iMac 2020",
+        image : "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/07/iMac-2020.png",
+        price : "24.550.000",
+        Screensize : ["21.5 inch","27 inch"],
+        Capacity: ["256GB","512GB","1TB"],
+        Screenresolution : ["Full HD","4K","5K"],
+        Chip : ["Core i3","Core i5","Core i7"]
       },
     ]
   },
