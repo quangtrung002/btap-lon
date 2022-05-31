@@ -263,26 +263,88 @@ const data = [
     ]
   },
   {
+    title: "AirPods",
+    button: "Xem tất cả >",
     airpods: [
       {
-        id: "",
-        name: "",
-        image: "",
-        title: "",
-        price: "",
-        button: ""
-      }
+        id: "1",
+        name: "AirPods 2",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/AirPods-2-ShopDunk.png",
+        price: "2.750.000",
+        oldprice: "4.390.000",
+      },
+      {
+        id: "2",
+        name: "AirPods (gen 3)",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/AirPods_3rd_Gen_PDP_Image_Position-2__VN-removebg-preview.png",
+        price: "4.450.000",
+        oldprice: "5.490.000",
+      },
+      {
+        id: "3",
+        name: "AirPods Max",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/AirPods-Max-1.png",
+        price: "10.490.000",
+      },
+      {
+        id: "4",
+        name: "AirPods Pro (2021)",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/airpods_pro_2021.png",
+        price: "4.650.000",
+        oldprice: "5.790.000",
+      },
+      {
+        id: "5",
+        name: "Beats EP On-Ear Headphones",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/01/13994_tai_nghe_beats_ep_on_ear_headphones_red_3.jpg",
+        price: "2.990.000",
+        oldprice: "3.290.000",
+        color : ["white","black","blue","(PRODUCT) RED"],
+      },
+      {
+        id: "6",
+        name: "Beats Fit Pro True Wireless Earbuds",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/01/MK2H3.jpg",
+        price: "4.490.000",
+        oldprice: "5.990.000",
+        color : ["Space Gray","White","Black","Purple"],
+      },
+      {
+        id: "7",
+        name: "Beats Solo3 Wireless Headphones",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/01/MX442-1.jpg",
+        price: "4.100.000",
+        oldprice: "4.990.000",
+        color : ["Rose Gold","Black","(PRODUCT) RED"],
+      },
+      {
+        id: "8",
+        name: "Beats Studio3 Wireless Headphones",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/01/MXJ92.jpg",
+        price: "5.990.000",
+        oldprice: "6.990.000",
+        color : ["Space Gray","Black","(PRODUCT) RED"],
+      },
+      {
+        id: "9",
+        name: "Beats Studio3 Wireless Over‑Ear Headphones",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/01/MX3Y2.jpg",
+        price: "6.990.000",
+        oldprice: "7.490.000",
+        color : ["White","Black","Blue","(PRODUCT) RED"],
+      },
+
     ]
   },
   {
+    title: "Watch",
+    button: "Xem tất cả >",
     watch: [
       {
-        id: "",
-        name: "",
-        image: "",
-        title: "",
-        price: "",
-        button: ""
+        id: "1",
+        name: "Apple Watch Series 7 Thép",
+        image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/watch-7-thep-1.png",
+        price: "17.990.000",
       }
     ]
   },
