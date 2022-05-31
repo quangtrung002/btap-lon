@@ -4,6 +4,7 @@
   bottom: 25px;
   z-index: 999;
   user-select: none;
+  cursor: pointer;
 }
 
 .zalo,
@@ -39,4 +40,9 @@
     line-height: 16px;
     cursor: text;
   }
+}
+
+.active{
+  display: block !important;
+  bottom: 85px;
 }
