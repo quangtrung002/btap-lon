@@ -12,8 +12,6 @@ export default function Home() {
       <div className={clsx(style.container)}>
         <div className="container overflow-hidden">
           <Item />
-          <Item />
-          <Item />
         </div>
       </div>
       <Search />

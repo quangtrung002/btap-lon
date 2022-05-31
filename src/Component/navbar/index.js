@@ -63,7 +63,7 @@ function Navbar() {
           </div>
         </div>
       </header>
-      <header className={clsx(style.mainMd, "d-none d-xs-block d-sm-block d-md-block d-lg-none")}>
+      <header className={clsx(style.mainMd, "d-block d-xs-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none")}>
         <div className={clsx(style.logo)}>
           <div className={clsx("container")}>
             <div className={clsx("row")}>
