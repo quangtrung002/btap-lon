@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { memo, useState } from 'react'
+import { data } from '../../../data'
 
-export default function Aaccessory() {
+import style from "./accessory.module.scss"
+import clsx from 'clsx'
+
+function Accessory() {
+  const [accessory, setAccessory] = useState(data.accessory)
+  console.log(accessory)
   return (
-    <div>
-      accessory
-    </div>
+    <main className={clsx(style.main)}>
+
+    </main>
   )
 }
+
+export default memo(Accessory)

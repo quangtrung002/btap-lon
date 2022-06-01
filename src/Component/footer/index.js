@@ -25,7 +25,7 @@ function Footer() {
       <div className={clsx(style.main)} onClick={() => { setTogle(!togle); setIndex(id) }}>
         <div className={clsx(style.col1)}>
           <h1 className={clsx("ps-2")}>{heading}</h1>
-          <span className={clsx({ [style.active]: togle }, "ps-2")}>
+          <span className={clsx({ [style.active]: resultActice }, "ps-2")}>
             <i class="bi bi-chevron-down"></i>
           </span>
         </div>

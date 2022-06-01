@@ -9,7 +9,13 @@ export default function Home() {
   return (
     <div className={clsx(style.main)}>
       <Slider />
-      <Item />
+      <div className={clsx(style.container)}>
+        <div className="container overflow-hidden">
+          <Item />
+          <Item />
+          <Item />
+        </div>
+      </div>
       <Search />
     </div>
   )
