@@ -20,7 +20,6 @@ function Pagenation({ postsPerPage, totalPosts, handChangePage }) {
     })
   },[])
 
-  console.log(pageNumbers)
   return (
     <div className='row'>
       <ul className={clsx(style.pagenation, 'd-flex justify-content-center gap-3 mt-5')}>

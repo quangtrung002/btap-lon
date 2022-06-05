@@ -20,12 +20,23 @@ function Posts({ currentPost }) {
                 {
                   item.price && item.oldprice
                     ? <>
-                      <del className={clsx(style.cardOldPrice, "me-2")}>{item.oldprice}</del>
-                      <span className={clsx(style.cardNewPrice)}>{item.price}</span>
+                      <del className={clsx(style.cardOldPrice, "me-2")}>{item.oldprice}
+                        <span className={clsx(style.dong)}>đ</span>
+                      </del>
+                      <span className={clsx(style.cardNewPrice)}>
+                        {item.price}
+                        <span className={clsx(style.dong)}>đ</span>
+                      </span>
                     </>
                     : item.oldprice
-                      ? <span className={clsx(style.cardOldPrice)}>{item.oldprice}</span>
-                      : <span className={clsx(style.cardNewPrice)}>{item.price}</span>
+                      ? <span className={clsx(style.cardOldPrice)}>
+                      {item.oldprice}
+                        <span className={clsx(style.dong)}>đ</span>
+                      </span>
+                      : <span className={clsx(style.cardNewPrice)}>
+                        {item.price}
+                        <span className={clsx(style.dong)}>đ</span>
+                      </span>
                 }
               </p>
               {

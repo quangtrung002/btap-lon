@@ -5,6 +5,7 @@ const data = {
       name: "Iphone 13 Pro Max",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13-pro-max.png",
       price: "29.290.000",
+      oldprice : "30.100.000",
       Capacity: ["128GB", "256GB", "512GB", "1TB"],
       color: ["Alpine Green", "Sierra Blue", "Graphite", "Silver", "Gold"]
     },
@@ -12,7 +13,8 @@ const data = {
       id: "2",
       name: "Iphone 13",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13.png",
-      price: "19.990.000",
+      price: "",
+      oldprice : "19.990.000",
       Capacity: ["128GB", "256GB", "512GB"],
       color: ["Alpine Green", "Midnight", "Starlight", "Blue", "(PRODUCT) RED", "Pink"]
     },
@@ -21,6 +23,7 @@ const data = {
       name: "Iphone 12",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-12-xanh.png",
       price: "16.190.000",
+      oldprice : "",
       Capacity: ["64GB", "128GB", "256GB"],
       color: ["White", "Black", "Blue", "Green", "Purple", "(PRODUCT) RED"]
     },
@@ -29,6 +32,7 @@ const data = {
       name: "Iphone 11",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-11-Green.png",
       price: "11.690.000",
+      oldprice : "12.350.000",
       Capacity: ["64GB", "128GB", "256GB"],
       color: ["White", "Black", "Yellow", "Green", "Purple", "(PRODUCT) RED"]
     },
@@ -37,6 +41,7 @@ const data = {
       name: "iPhone 13 mini",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ip13mini-1.png",
       price: "18.590.000",
+      oldprice : "19.490.000",
       Capacity: ["128GB", "256GB", "512GB"],
       color: ["Alpine Green", "Midnight", "Starlight", "Blue", "(PRODUCT) RED", "Pink"]
     },
@@ -45,6 +50,7 @@ const data = {
       name: "iPhone 13 Pro",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ip13pro-1.png",
       price: "26.990.000",
+      oldprice : "",
       Capacity: ["128GB", "256GB", "512GB", "1TB"],
       color: ["Alpine Green", "Sierra Blue", "Graphite", "Silver", "Gold"]
     },
@@ -52,7 +58,8 @@ const data = {
       id: "7",
       name: "iPhone 12 mini",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ip12mini.png",
-      price: "14.950.000",
+      price: "",
+      oldprice : "14.950.000",
       Capacity: ["64GB", "128GB", "256GB"],
       color: ["White", "Black", "Blue", "Green", "Purple", "(PRODUCT) RED"]
     },
@@ -60,7 +67,8 @@ const data = {
       id: "8",
       name: "iPhone SE (2022)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/ipse.png",
-      price: "11.990.000",
+      price: "",
+      oldprice : "11.990.000",
       Capacity: ["64GB", "128GB", "256GB"],
       color: ["Midnight", "Starlight", "Blue", "(PRODUCT) RED"]
     },
@@ -71,6 +79,7 @@ const data = {
       name: "iPad gen 9 (2021)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-gen-9.png",
       price: "8.990.000",
+      oldprice : "",
       Capacity: ["64GB", "256GB"],
       color: ["Space Gray", "Silver"],
       Model: ["Wi-Fi", "Wi-Fi + 4G"]
@@ -79,7 +88,8 @@ const data = {
       id: "2",
       name: "iPad mini 6 (2021)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-mini-6.png",
-      price: "13.290.000",
+      price: "",
+      oldprice : "13.290.000",
       Capacity: ["64GB", "256GB"],
       color: ["Starlight", "Space Gray", "Purple", "Pink"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
@@ -89,6 +99,7 @@ const data = {
       name: "iPad Pro 11 inch (M1, 2021)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1-11-768x768-1.webp",
       price: "19.950.000",
+      oldprice : "21.290.000",
       Capacity: ["128GB", "256GB", "512GB", "1TB", "2TB"],
       color: ["Space Gray", "Silver"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
@@ -98,6 +109,7 @@ const data = {
       name: "iPad Pro 12.9 inch (M1, 2021)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
       price: "24.990.000",
+      oldprice : "",
       Capacity: ["128GB", "256GB", "512GB", "1TB", "2TB"],
       color: ["Space Gray", "Silver"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
@@ -107,6 +119,7 @@ const data = {
       name: "iPad Air 5",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
       price: "15.390.000",
+      oldprice : "16.590.000",
       Capacity: ["64GB", "256GB"],
       color: ["Starlight", "Space Gray", "blue", "Purple", "Pink"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
@@ -116,6 +129,7 @@ const data = {
       name: "iPad Air 4",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-air-4.png",
       price: "14.490.000",
+      oldprice : "15.990.000",
       Capacity: ["64GB", "256GB"],
       color: ["Space Gray", "silver", "Green", "Sky blue", "Pink"],
       Model: ["Wi-Fi", "Wi-Fi + 4G"]
@@ -127,6 +141,7 @@ const data = {
       name: "MacBook Pro 14 M1 Pro (14-Core/16GB/512GB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
       price: "47.990.000",
+      oldprice : "48.490.000",
       color: ["Space Gray", "silver"]
     },
     {
@@ -134,13 +149,15 @@ const data = {
       name: "MacBook Pro 14 M1 Pro (16-Core/16GB/1TB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
       price: "58.990.000",
+      oldprice : "",
       color: ["Space Gray", "silver"]
     },
     {
       id: "3",
       name: "MacBook Air M1 2020",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook-Air-M1-2020.png",
-      price: "23.490.000",
+      price: "",
+      oldprice : "23.490.000",
       color: ["Space Gray", "silver", "Gold"]
     },
     {
@@ -148,6 +165,7 @@ const data = {
       name: "MacBook Pro M1 2020",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook-Pro-M1-2020.png",
       price: "30.250.000",
+      oldprice : "",
       color: ["Space Gray", "silver"]
     },
     {
@@ -155,6 +173,7 @@ const data = {
       name: "MacBook Pro 16 M1 Pro (16-Core/32GB/512GB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Silver-1.png",
       price: "71.950.000",
+      oldprice : "",
       color: ["Space Gray", "silver"]
     },
     {
@@ -162,6 +181,7 @@ const data = {
       name: "MacBook Pro 16 M1 Pro (16-Core/16GB/1TB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Silver-1.png",
       price: "64.750.000",
+      oldprice : "65.450.000",
       color: ["Space Gray", "silver"]
     },
     {
@@ -169,6 +189,7 @@ const data = {
       name: "MacBook Pro 14 M1 Max",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_14-in_Space-1.png",
       price: "71.990.000",
+      oldprice : "",
       color: ["Space Gray", "silver"],
       Capacity: ["512GB", "1TB"],
       Ram: ["32GB", "64GB"],
@@ -179,6 +200,7 @@ const data = {
       name: "MacBook Pro 16 M1 Max",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Space_Gray_PDP_Image_Position-1__VN-2-1.png",
       price: "89.950.000",
+      oldprice : "90.550.000",
       color: ["Space Gray", "silver"],
       Capacity: ["1TB"],
       Ram: ["32GB", "64GB"],
@@ -188,7 +210,8 @@ const data = {
       id: "9",
       name: "MacBook Pro 16 M1 Pro (16-Core/32GB/512GB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/MacBook_Pro_16-in_Silver-1.png",
-      price: "71.950.000",
+      price: "",
+      oldprice : "71.950.000",
       color: ["Space Gray", "silver"],
     },
     {
@@ -196,6 +219,7 @@ const data = {
       name: "MacBook Pro 14 M1 Pro (16-Core/32GB/512GB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
       price: "63.950.000",
+      oldprice : "",
       color: ["Space Gray", "silver"],
     },
     {
@@ -203,6 +227,7 @@ const data = {
       name: "MacBook Pro 14 M1 Pro (16-Core/32GB/1TB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
       price: "72.790.000",
+      oldprice : "",
       color: ["Space Gray", "silver"],
     },
     {
@@ -210,6 +235,7 @@ const data = {
       name: "MacBook Pro 14 M1 Pro (14-Core/32GB/512GB)",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/MacBook_Pro_14-in_Silver-1.png",
       price: "57.450.000",
+      oldprice : "58.850.000",
       color: ["Space Gray", "silver"],
     },
     {
@@ -217,6 +243,7 @@ const data = {
       name: "Studio Display",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/mac-studio-1-removebg-preview-1-1.png",
       price: "43.990.000",
+      oldprice : "",
       screen: "Standard Glass"
     },
     {
@@ -224,6 +251,7 @@ const data = {
       name: "Mac Studio",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/macstudio.png",
       price: "59.990.000",
+      oldprice : "",
       screen: "Standard Glass",
       Capacity: ["512GB", "1TB"],
       Ram: ["32GB", "64GB"],
@@ -234,6 +262,7 @@ const data = {
       name: "iMac M1 2021 24 inch",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/imac-m1-2021.2.png",
       price: "31.450.000",
+      oldprice : "32.850.000",
       color: ["Silver", "Blue", "Green", "Pink"],
       Capacity: ["256GB", "512GB"],
       Ram: ["8GB", "16GB"],
@@ -244,6 +273,7 @@ const data = {
       name: "iMac 2020",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/07/iMac-2020.png",
       price: "24.550.000",
+      oldprice : "",
       Screensize: ["21.5 inch", "27 inch"],
       Capacity: ["256GB", "512GB", "1TB"],
       Screenresolution: ["Full HD", "4K", "5K"],
@@ -270,6 +300,7 @@ const data = {
       name: "AirPods Max",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/AirPods-Max-1.png",
       price: "10.490.000",
+      oldprice : ""
     },
     {
       id: "4",
@@ -1044,39 +1075,47 @@ const data = {
       name: "Apple Care",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/07/apple-care-logo-03.png",
       price: "690.000",
+      oldprice : "750.000"
     },
     {
       id: "2",
       name: "Bảo Hành Kim Cương",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/10/BHKC-02-1-1536x1536.png",
       price: "199.000",
+      oldprice : ""
     },
     {
       id: "3",
       name: "Microsoft Office",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/07/efc838be9e8aa13b4de4cbfc0b927fd9.1-02-5-692x692.png",
       price: "990.000",
+      oldprice : "1.100.000"
     },
     {
       id: "4",
       name: "Apple School Manager",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/Apple-school-manager.png",
       price: "Dành cho Trường học",
+      oldprice : ""
     },
     {
       id: "5",
       name: "Apple Business Manager",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/Apple-Business-Manager.png",
       price: "Dành cho Doanh nghiệp",
+      oldprice : ""
     },
     {
       id: "6",
       name: "Thu cũ đổi mới",
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/elementor/thumbs/iphone-trade-in-202010-1-po9osvfx1ow08ys872sup6ecpfq4uhdd6uigd7dxs0.png",
       price: "Xem ngay",
+      oldprice : ""
     },
   ]
 }
+
+console.log(data.iphone.length + data.ipad.length + data.mac.length + data.airpods.length + data.watch.length + data.accessory.length + data.service.length)
 
 const navbar = [
   {
@@ -1159,7 +1198,6 @@ const footer = [
 ]
 
 export { data, navbar, slider, footer }
-
 
 
 
