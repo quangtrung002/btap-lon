@@ -51,6 +51,8 @@
       }
 
       .navLink {
+        line-height: var(--height-navbar);
+        padding: 0 !important;
         color: var(--color-navbar) !important;
         font-size: var(--font-size-navbar);
 

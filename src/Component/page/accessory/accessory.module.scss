@@ -1,0 +1,195 @@
+:root {
+  --color-heading: #4B4B4B;
+  --color-black-6: #666666;
+  --color-label: #515154;
+  --color-price: #0066cc;
+  --color-price-old: #86868b;
+  --color-title: #1d1d1f;
+}
+
+
+// global css 
+.firstLetter {
+  &::first-letter {
+    text-transform: capitalize !important;
+  }
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+.main {
+  background-color: #f5f5f7;
+
+  .heading {
+    color: var(--color-heading);
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .select {
+    border-color: transparent;
+    border-radius: 8px !important;
+    padding: 10px 10px;
+    color: var(--color-black-6);
+
+    &:focus {
+      border-color: #000;
+      box-shadow: none;
+    }
+  }
+
+  .active {
+    padding-right: 100px !important;
+    color: var(--color-heading) !important;
+    font-weight: bold;
+  }
+
+  .input {
+    width: 80% !important;
+    border-style: dotted !important;
+  }
+
+  .range {
+    .label {
+      color: var(--color-heading);
+    }
+  }
+
+  //col1
+  .wrap {
+    .title {
+      color: var(--color-heading) !important;
+    }
+
+    .brand,
+    .category,
+    .price {
+      padding: 15px;
+      background-color: #fff;
+      border-style: solid;
+      border-color: #02010100;
+      border-radius: 8px;
+    }
+
+    .category,
+    .brand,
+    .price {
+      .content {
+        .item {
+          margin-bottom: 1rem;
+
+          .radio,
+          .checkbox {
+            &:focus-within {
+              box-shadow: none;
+            }
+
+            &:checked {
+              background-color: #ccc !important;
+              border-color: #ccc !important;
+            }
+          }
+
+          .label {
+            color: var(--color-label);
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
+  }
+
+  //col2
+  .card {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer; 
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .cardImg {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+
+    .cardBody {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .cardTitle {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      color: var(--color-title);
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 27px;
+      min-height: 54px;
+    }
+
+    .cardPrice {
+      .cardOldPrice {
+        color: var(--color-price-old);
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      .cardNewPrice {
+        color: var(--color-price);
+        font-size: 15px;
+        line-height: 26px;
+        font-weight: 700;
+      }
+    }
+
+    .cardSale {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 2px;
+      background-color: #f46813;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+  }
+
+  .pagenation {
+    .pageItem {
+      span {
+        padding: 10px 20px;
+        color: var(--color-heading);
+        background-color: #fff;
+
+        &:hover {
+          background-color: var(--color-price);
+          color: #fff;
+        }
+      }
+
+      .activePage {
+        background-color: var(--color-price) !important;
+        color: #fff !important;
+      }
+
+    }
+  }
+}
