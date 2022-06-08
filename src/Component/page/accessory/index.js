@@ -10,16 +10,24 @@ import Content from './content'
 
 function Accessory() {
   const [accessory, setAccessory] = useState(data.accessory)
+  const [cloneAccessory, setCloneAccessory] = useState(data.accessory)
 
   const img = 'https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/05/Banner-Phu-Kien-summer_Danh-muc-PC.png'
-  
+
   return (
     <themeAccessory.Provider value={[accessory, setAccessory]}>
       <div className={clsx(style.main, "pt-4 pb-5")}>
         <div className={clsx('container')}>
           <Header heading="phụ kiện" img={img} />
-          <Filter />
-          <Content accessory = {accessory}/>
+          <Filter
+            cloneAccessory={cloneAccessory}
+            setCloneAccessory={setCloneAccessory}
+          />
+          <Content
+            accessory={accessory}
+            cloneAccessory={cloneAccessory}
+            setCloneAccessory={setCloneAccessory}
+          />
         </div>
       </div>
     </themeAccessory.Provider>
