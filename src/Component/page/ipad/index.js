@@ -1,9 +1,18 @@
 import React from 'react'
 
+import PageItem from "../pageItem";
+import { data } from "../../../data";
+
 export default function Ipad() {
+  const allitem = ["tat ca", '3', '4']
   return (
-    <div>
-      Ipad
-    </div>
+    <>
+      <PageItem  
+        heading = "ipad"
+        pathImg = "src"
+        allitem={allitem}
+        posts = {data.ipad}
+      />
+    </>
   )
 }
