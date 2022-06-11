@@ -123,7 +123,7 @@ function Navbar() {
               <nav className={clsx('col-12')}>
                 <ul className={clsx(style.list, "d-flex justify-content-between")}>
                   {Array.from({ length: 6 }).map((item, index) => (
-                    <li className={clsx(style.item, "d-flex align-items-center")}>
+                    <li className={clsx(style.item, "d-flex align-items-center")} key={index}>
                       <Link className={clsx(style.itemLink, { [style.active]: active === navbar[index].id })} to={navbar[index].path} key={index} onClick={() => setActive(navbar[index].id)}>{navbar[index].name}</Link>
                     </li>
                   ))}

@@ -3,7 +3,7 @@ import React, { memo, useCallback, useMemo, useState } from 'react'
 import style from "../accessory.module.scss"
 import clsx from 'clsx'
 
-function Pagenation({ postsPerPage, totalPosts, handChangePage }) {
+function Pagenation({ postsPerPage, totalPosts, handleChangePage }) {
 
   const [active, setActive] = useState(1)
   const pageNumbers = useMemo(()=>{
@@ -31,7 +31,7 @@ function Pagenation({ postsPerPage, totalPosts, handChangePage }) {
               onClick={() => {
                 scrollToTop()
                 setActive(number)
-                handChangePage(number)
+                handleChangePage(number)
               }}>
               {number}
             </span>

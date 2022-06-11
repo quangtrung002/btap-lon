@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import style from "../accessory.module.scss"
 import clsx from 'clsx'
 
-function Category({ category }) {
+function Category({ category, handleFilterCategory }) {
   return (
     <div className={clsx(style.category)}>
       <h1 className={clsx(style.firstLetter, style.title, "fs-6 fw-bold mb-3")}>
@@ -17,6 +17,7 @@ function Category({ category }) {
               type="radio"
               name="flexRadioDefault"
               id="flexRadioDefault1"
+              onClick={() => handleFilterCategory(item)}
             />
             <label
               className={clsx(style.firstLetter, style.label, "form-check-label fs-6")}

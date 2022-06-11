@@ -1,38 +1,57 @@
 import React, { memo } from 'react'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import clsx from 'clsx'
 import style from "./home.module.scss"
 
-function Item({ item }) {
+function Item({ heading, items, button, path }) {
   return (
     <div className={clsx("text-center")}>
-      <h1 className={clsx(style.heading)}>iphone</h1>
+      <h1 className={clsx(style.heading)}>{heading}</h1>
       <div className='row g-lg-4 g-md-3'>
-        {Array.from({ length: 4 }).map((item, index) => (
-          <div className='col col-md-6 col-lg-3'>
-            <div className={clsx(style.cart, "card border-0")} >
-              <img src="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13-pro-max.png" class="card-img-top" alt=".Ảnh lỗi" />
-              <div class="card-body text-start ps-4">
-                <p className={clsx(style.cartText, "card-text")}>
-                  <h2>iphone 12</h2>
-                  <div className={clsx(style.price, "d-flex gap-3")}>
-                    <p className= {clsx(style.priceOld ,'d-flex position-relative')}>
-                      <del>19.000.000 <ins className='position-absolute'>đ</ins></del>
-                    </p>
-                    <p className= {clsx(style.priceNew ,'d-flex position-relative')}>
-                      <span>23.000.000</span>
-                      <ins className='position-absolute'>đ</ins>
-                    </p>
-                  </div>
+        {items.slice(0, 4).map((item, index) => (
+          <div className='col col-md-6 col-lg-3' key={index}>
+            <div className={clsx(style.card, "card text-start")}>
+              <img
+                src={item.image}
+                className={clsx(style.cardImg, "card-img-top py-4")}
+                alt={item.id}
+              />
+              <div className={clsx(style.cartBody, "card-body px-4")}>
+                <h5 className={clsx(style.cardTitle, "card-title")}>{item.name}</h5>
+                <p className={clsx(style.cardPrice, "card-text")}>
+                  {
+                    item.price && item.oldprice
+                      ? <>
+                        <del className={clsx(style.cardOldPrice, "me-2")}>{item.oldprice}
+                          <span className={clsx(style.dong)}>đ</span>
+                        </del>
+                        <span className={clsx(style.cardNewPrice)}>
+                          {item.price}
+                          <span className={clsx(style.dong)}>đ</span>
+                        </span>
+                      </>
+                      : item.oldprice
+                        ? <span className={clsx(style.cardOldPrice)}>
+                          {item.oldprice}
+                          <span className={clsx(style.dong)}>đ</span>
+                        </span>
+                        : <span className={clsx(style.cardNewPrice)}>
+                          {item.price}
+                          <span className={clsx(style.dong)}>đ</span>
+                        </span>
+                  }
                 </p>
+                {
+                  item.sale && <div className={clsx(style.cardSale, style.firstLetter)}>{`giảm ${item.sale}`}</div>
+                }
               </div>
             </div>
           </div>
         ))}
       </div>
-      <Link to="/ipad" className={clsx(style.allItem, "d-flex justify-content-center")}>
-        <button type="button" className={clsx(style.btnAllItem, "btn btn-outline-primary rounded-4 d-flex align-items-center")}>
-          <p className={clsx(style.btnName)}>xem tất cả iphone</p>
+      <Link to={path} className={clsx(style.allItem, "d-flex justify-content-center")}>
+        <button type="button" className={clsx(style.btnAllItem, "btn btn-outline-primary rounded-4 d-flex align-items-center gap-1")}>
+          <p className={clsx(style.btnName)}>{button}</p>
           <i className={clsx(style.btnIcon, "bi bi-chevron-right")}></i>
         </button>
       </Link>
