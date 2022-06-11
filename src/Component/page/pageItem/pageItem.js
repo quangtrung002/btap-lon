@@ -2,6 +2,7 @@ import React, { memo } from "react";
 
 import clsx from "clsx";
 import style from "./pageItem.module.scss";
+import { Link } from "react-router-dom";
 
 function PageItem({ heading, pathImg, allitem, posts }) {
   console.log(posts);
@@ -10,7 +11,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
       <div className="container">
         <div className="row">
           <div className={clsx(style.main)}>
-            <h1>{heading}</h1>
+            <h1 className={clsx(style.Header)}>{heading}</h1>
             {/* anh slide */}
             <div className={clsx(style.Slider)}>
               <div
@@ -18,7 +19,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
                 class="carousel slide"
                 data-bs-ride="true"
               >
-                <div className={clsx(style.dotSlide,"carousel-indicators")}>
+                <div className={clsx(style.dotSlide, "carousel-indicators")}>
                   <button
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
@@ -79,23 +80,76 @@ function PageItem({ heading, pathImg, allitem, posts }) {
             </div>
 
             {/* thanh chon loai may */}
-            <div className={clsx(style.Chonmay,"d-flex gap-2")}>
-              {allitem.map((item, index) => (
-                <button type="button" key={index} class="btn btn-outline-secondary" disabled="">{item}</button>
+            <div className={clsx(style.Chonmay, "d-flex gap-2")}>
+              {allitem.map((item) => (
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  disabled=""
+                >
+                  {item}
+                </button>
               ))}
             </div>
 
             {/* Xem chi tiet may */}
-            <div>
-              {posts.map((item) => (
-                <h2 key={item.id}>{item.name}</h2>
-              ))}
-            </div>
+            {posts.map((item) => (
+              <div className={clsx(style.cardofphone, "text-center")}>
+                <h1 className={clsx(style.heading)}>{heading}</h1>
+                <div className="row g-lg-4 g-md-3">
+                  <Link
+                    to={`/${heading.toLowerCase() + "/" + item.id}`}
+                    className="col col-md-6 col-lg-3"
+                  >
+                    <div className={clsx(style.card, "card text-start")}>
+                      <img
+                        src={item.image}
+                        className={clsx(style.cardImg, "card-img-top py-4")}
+                        alt={item.id}
+                      />
+                      <div className={clsx(style.cartBody, "card-body px-4")}>
+                        <h5 className={clsx(style.cardTitle, "card-title")}>
+                          {item.name}
+                        </h5>
+                        <p className={clsx(style.cardPrice, "card-text")}>
+                          {item.price && item.oldprice ? (
+                            <>
+                              <del className={clsx(style.cardOldPrice, "me-2")}>
+                                {item.oldprice}
+                                <span className={clsx(style.dong)}>đ</span>
+                              </del>
+                              <span className={clsx(style.cardNewPrice)}>
+                                {item.price}
+                                <span className={clsx(style.dong)}>đ</span>
+                              </span>
+                            </>
+                          ) : item.oldprice ? (
+                            <span className={clsx(style.cardOldPrice)}>
+                              {item.oldprice}
+                              <span className={clsx(style.dong)}>đ</span>
+                            </span>
+                          ) : (
+                            <span className={clsx(style.cardNewPrice)}>
+                              {item.price}
+                              <span className={clsx(style.dong)}>đ</span>
+                            </span>
+                          )}
+                        </p>
+                        {item.sale && (
+                          <div
+                            className={clsx(style.cardSale, style.firstLetter)}
+                          >{`giảm ${item.sale}`}</div>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
 }
-
 export default memo(PageItem);

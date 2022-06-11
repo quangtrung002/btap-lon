@@ -1,6 +1,6 @@
 import React from 'react'
 
-import PageItem from "../pageItem";
+import PageItem from "../pageItem/pageItem";
 import { data } from "../../../data";
 
 export default function Ipad() {
