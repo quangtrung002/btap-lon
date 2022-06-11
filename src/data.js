@@ -1058,8 +1058,6 @@ const data = {
   ]
 }
 
-console.log(data.iphone.length + data.ipad.length + data.mac.length + data.airpods.length + data.watch.length + data.accessory.length + data.service.length)
-
 const navbar = [
   {
     id: 1,

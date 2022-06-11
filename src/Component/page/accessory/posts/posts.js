@@ -2,6 +2,7 @@ import React from 'react'
 
 import style from "../accessory.module.scss"
 import clsx from 'clsx'
+import { Link } from 'react-router-dom'
 
 function Posts({ currentPost }) {
   return (
@@ -9,7 +10,7 @@ function Posts({ currentPost }) {
       {currentPost.length === 0
         ? <h1 className={clsx(style.firstLetter, 'text-center fs-6 fw-bold')}>không tìm thấy kết quả</h1>
         : currentPost.map((item, index) => (
-          <div className={clsx("col-sm-6 col-md-6 col-xl-4")} key={index}>
+          <Link to={`/${item.name}`} className={clsx("col-sm-6 col-md-6 col-xl-4")} key={index}>
             <div className={clsx(style.card, "card")}>
               <img
                 src={item.image}
@@ -46,7 +47,7 @@ function Posts({ currentPost }) {
                 }
               </div>
             </div>
-          </div>
+          </Link>
         ))}
     </div>
   )
