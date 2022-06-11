@@ -1,11 +1,13 @@
-import clsx from 'clsx'
-import React, { memo, useState } from 'react'
+import React, { memo, useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import { navbar } from '../../data'
+import clsx from 'clsx'
 import style from "./navbar.module.scss"
+import { themeContextApp } from '../../App'
 
 function Navbar() {
-  const [amount, setAmount] = useState(0)
+  const [amountItems, setAmountItems] = useContext(themeContextApp)
   const [active, setActive] = useState(0)
   const [toggleList, setToggleList] = useState(false)
   const dataContact = [
@@ -52,10 +54,10 @@ function Navbar() {
                   <a class="m-0" href="#">
                     <i className={clsx(style.iconSearch, "bi bi-search")}></i>
                   </a>
-                  <a className={clsx(style.bag, "m-0")} href="#">
+                  <Link to="/cart" className={clsx(style.bag, "m-0")} href="#">
                     <i className={clsx(style.iconBag, "bi bi-bag")}></i>
-                    <span className={clsx(style.amount)}>{amount}</span>
-                  </a>
+                    <span className={clsx(style.amount)}>{amountItems}</span>
+                  </Link>
                 </div>
               </nav>
             </div>
@@ -108,10 +110,10 @@ function Navbar() {
                       <img alt="ShopDunk - Đại lý uỷ quyền Apple" width="131" height="34" nitro-lazy-src="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/Property-1White_mobile.svg" class="jet-logo__img lazyloaded" nitro-lazy-empty="" id="NDI4OjIzNA==-1" src="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/Property-1White_mobile.svg" />
                     </Link>
                   </div>
-                  <a className='position-relative'>
+                  <Link to="/cart" className='position-relative'>
                     <i class="bi bi-bag text-light fs-5"></i>
-                    <span className={clsx(style.amount, "text-dark")}>{amount}</span>
-                  </a>
+                    <span className={clsx(style.amount, "text-dark")}>{amountItems}</span>
+                  </Link>
                 </div>
               </nav>
             </div>
@@ -124,7 +126,14 @@ function Navbar() {
                 <ul className={clsx(style.list, "d-flex justify-content-between")}>
                   {Array.from({ length: 6 }).map((item, index) => (
                     <li className={clsx(style.item, "d-flex align-items-center")} key={index}>
-                      <Link className={clsx(style.itemLink, { [style.active]: active === navbar[index].id })} to={navbar[index].path} key={index} onClick={() => setActive(navbar[index].id)}>{navbar[index].name}</Link>
+                      <Link
+                        to={navbar[index].path}
+                        className={clsx(style.itemLink, { [style.active]: active === navbar[index].id })}
+                        key={index}
+                        onClick={() => setActive(navbar[index].id)}
+                      >
+                        {navbar[index].name}
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -4,12 +4,17 @@ import clsx from 'clsx'
 import style from "./home.module.scss"
 
 function Item({ heading, items, button, path }) {
+  const backToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  backToTop()
+  
   return (
     <div className={clsx("text-center")}>
       <h1 className={clsx(style.heading)}>{heading}</h1>
       <div className='row g-lg-4 g-md-3'>
         {items.slice(0, 4).map((item, index) => (
-          <div className='col col-md-6 col-lg-3' key={index}>
+          <Link to={`/${heading.toLowerCase() + '/' + item.id}`} className='col col-md-6 col-lg-3' key={index}>
             <div className={clsx(style.card, "card text-start")}>
               <img
                 src={item.image}
@@ -46,7 +51,7 @@ function Item({ heading, items, button, path }) {
                 }
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <Link to={path} className={clsx(style.allItem, "d-flex justify-content-center")}>

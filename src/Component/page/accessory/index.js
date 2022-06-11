@@ -9,6 +9,11 @@ import Content from './content'
 
 
 function Accessory() {
+  const backToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  backToTop()
+
   const [accessory, setAccessory] = useState(data.accessory)
   const [cloneAccessory, setCloneAccessory] = useState(data.accessory)
 
