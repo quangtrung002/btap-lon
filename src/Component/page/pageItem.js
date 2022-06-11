@@ -18,7 +18,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
                 class="carousel slide"
                 data-bs-ride="true"
               >
-                <div class="carousel-indicators">
+                <div className={clsx(style.dotSlide,"carousel-indicators")}>
                   <button
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
@@ -79,12 +79,13 @@ function PageItem({ heading, pathImg, allitem, posts }) {
             </div>
 
             {/* thanh chon loai may */}
-            <div className={clsx(style.Chonmay)}>
+            <div className={clsx(style.Chonmay,"d-flex gap-2")}>
               {allitem.map((item, index) => (
-                <button key={index}>{item}</button>
+                <button type="button" key={index} class="btn btn-outline-secondary" disabled="">{item}</button>
               ))}
             </div>
 
+            {/* Xem chi tiet may */}
             <div>
               {posts.map((item) => (
                 <h2 key={item.id}>{item.name}</h2>
