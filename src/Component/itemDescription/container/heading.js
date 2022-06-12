@@ -11,7 +11,7 @@ function Heading({ heading }) {
         <div className='d-flex align-items-center gap-2'>
           <div className={clsx(style.star)}>
             {Array.from({ length: 5 }).map((item, index) => (
-              <span><i class="bi bi-star-fill fs-6"></i></span>
+              <span key={index}><i class="bi bi-star-fill fs-6"></i></span>
             ))}
           </div>
           <p className={clsx(style.firstLetter, style.comment, style.titleDes)}>đánh giá</p>

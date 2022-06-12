@@ -29,9 +29,9 @@ function Description({ item }) {
                 <span className={clsx(style.dong)}>đ</span>
               </span>
         }
-        <p>
+        <p className={clsx(style.firstLetter, style.abc)}>
           trả góp từ
-          <span>2.582.000</span>
+          <span className="fw-bold mx-1">2.582.000</span>
           đ/tháng
         </p>
       </div>

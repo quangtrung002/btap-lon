@@ -17,6 +17,8 @@
 }
 
 .main {
+  user-select: none;
+
   .header {
     cursor: pointer;
     font-size: 14px;
@@ -38,6 +40,7 @@
   .container {
     background-color: var(--bg-container);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-bottom: 100px;
 
     .img {
       width: 90%;
@@ -47,17 +50,20 @@
 
     .heading {
       border-bottom: 1px solid #ccc;
-      .star{
-        i{
+
+      .star {
+        i {
           color: var(--bg-star);
         }
       }
-      .titleDes{
+
+      .titleDes {
         font-size: 12px;
         color: var(--color-heading-2);
         font-weight: 400;
         cursor: pointer;
       }
+
       .comment {
         position: relative;
 
@@ -74,7 +80,8 @@
 
       }
     }
-    .description{
+
+    .description {
       .price {
         .cardOldPrice {
           color: var(--color-price-old);
@@ -82,18 +89,98 @@
           font-size: 18px;
           line-height: 26px;
         }
-  
+
         .cardNewPrice {
           color: var(--color-price);
           font-size: 20px;
           line-height: 26px;
           font-weight: 700;
         }
-        .dong{
+
+        .dong {
           font-size: 12px;
           position: relative;
           top: -4px;
           left: 2px;
+          text-decoration: underline;
+        }
+      }
+
+      .abc {
+        font-size: 13px;
+        margin: 10px 0;
+      }
+    }
+
+    .color,
+    .capacity {
+      .label {
+        font-size: 15px !important;
+        color: var(--color-heading-3);
+      }
+
+      button {
+        font-size: 15px;
+        color: var(--color-heading-6);
+
+        &:hover {
+          border-color: var(--color-heading-2) !important;
+          color: var(--color-heading-1);
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .activeColor,
+      .activeCapacity {
+        background-color: #0066cc !important;
+        color: #fff;
+
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    .cart {
+
+      .btnUpCount,
+      .btnDownCount {
+        background-color: var(--color-heading-6);
+        font-size: 12px;
+        opacity: .8;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .btnAdd {
+        background-color: var(--color-heading-2);
+
+        &:hover {
+          opacity: .85;
+        }
+        &:focus{
+          box-shadow: none;
+        }
+      }
+    }
+
+    .gift {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 8px;
+
+      .listInfor {
+        padding: 10px 0;
+        .itemInfor {
+          list-style: inside;
+          color: var(--color-heading-3);
+          line-height: 25px;
+          font-size: 15px;
         }
       }
     }

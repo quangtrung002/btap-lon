@@ -6,7 +6,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13-pro-max.png",
       price: "29.290.000",
       oldprice: "30.100.000",
-      Capacity: ["128GB", "256GB", "512GB", "1TB"],
+      capacity: ["128GB", "256GB", "512GB", "1TB"],
       color: ["Alpine Green", "Sierra Blue", "Graphite", "Silver", "Gold"]
     },
     {
@@ -15,7 +15,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-13.png",
       price: "",
       oldprice: "19.990.000",
-      Capacity: ["128GB", "256GB", "512GB"],
+      capacity: ["128GB", "256GB", "512GB"],
       color: ["Alpine Green", "Midnight", "Starlight", "Blue", "(PRODUCT) RED", "Pink"]
     },
     {
@@ -24,7 +24,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-b8e5fec/wp-content/uploads/2022/04/iPhone-12-xanh.png",
       price: "16.190.000",
       oldprice: "",
-      Capacity: ["64GB", "128GB", "256GB"],
+      capacity: ["64GB", "128GB", "256GB"],
       color: ["White", "Black", "Blue", "Green", "Purple", "(PRODUCT) RED"]
     },
     {
@@ -33,7 +33,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/04/iPhone-11-Green.png",
       price: "11.690.000",
       oldprice: "12.350.000",
-      Capacity: ["64GB", "128GB", "256GB"],
+      capacity: ["64GB", "128GB", "256GB"],
       color: ["White", "Black", "Yellow", "Green", "Purple", "(PRODUCT) RED"]
     },
     {
@@ -42,7 +42,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-b8e5fec/wp-content/uploads/2022/04/ip13mini-1.png",
       price: "18.590.000",
       oldprice: "19.490.000",
-      Capacity: ["128GB", "256GB", "512GB"],
+      capacity: ["128GB", "256GB", "512GB"],
       color: ["Alpine Green", "Midnight", "Starlight", "Blue", "(PRODUCT) RED", "Pink"]
     },
     {
@@ -51,7 +51,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-b8e5fec/wp-content/uploads/2022/04/ip13pro-1.png",
       price: "26.990.000",
       oldprice: "",
-      Capacity: ["128GB", "256GB", "512GB", "1TB"],
+      capacity: ["128GB", "256GB", "512GB", "1TB"],
       color: ["Alpine Green", "Sierra Blue", "Graphite", "Silver", "Gold"]
     },
     {
@@ -60,7 +60,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-b8e5fec/wp-content/uploads/2022/04/ip12mini.png",
       price: "",
       oldprice: "14.950.000",
-      Capacity: ["64GB", "128GB", "256GB"],
+      capacity: ["64GB", "128GB", "256GB"],
       color: ["White", "Black", "Blue", "Green", "Purple", "(PRODUCT) RED"]
     },
     {
@@ -69,7 +69,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-b8e5fec/wp-content/uploads/2022/04/ipse.png",
       price: "",
       oldprice: "11.990.000",
-      Capacity: ["64GB", "128GB", "256GB"],
+      capacity: ["64GB", "128GB", "256GB"],
       color: ["Midnight", "Starlight", "Blue", "(PRODUCT) RED"]
     },
   ],
@@ -80,7 +80,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-gen-9.png",
       price: "8.990.000",
       oldprice: "",
-      Capacity: ["64GB", "256GB"],
+      capacity: ["64GB", "256GB"],
       color: ["Space Gray", "Silver"],
       Model: ["Wi-Fi", "Wi-Fi + 4G"]
     },
@@ -90,7 +90,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2022/03/ipad-mini-6.png",
       price: "",
       oldprice: "13.290.000",
-      Capacity: ["64GB", "256GB"],
+      capacity: ["64GB", "256GB"],
       color: ["Starlight", "Space Gray", "Purple", "Pink"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
     },
@@ -100,7 +100,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1-11-768x768-1.webp",
       price: "19.950.000",
       oldprice: "21.290.000",
-      Capacity: ["128GB", "256GB", "512GB", "1TB", "2TB"],
+      capacity: ["128GB", "256GB", "512GB", "1TB", "2TB"],
       color: ["Space Gray", "Silver"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
     },
@@ -110,7 +110,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
       price: "24.990.000",
       oldprice: "",
-      Capacity: ["128GB", "256GB", "512GB", "1TB", "2TB"],
+      capacity: ["128GB", "256GB", "512GB", "1TB", "2TB"],
       color: ["Space Gray", "Silver"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
     },
@@ -120,7 +120,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-ed43433/wp-content/uploads/2021/11/ipad-pro-m1.12.9-768x768-1.webp",
       price: "15.390.000",
       oldprice: "16.590.000",
-      Capacity: ["64GB", "256GB"],
+      capacity: ["64GB", "256GB"],
       color: ["Starlight", "Space Gray", "blue", "Purple", "Pink"],
       Model: ["Wi-Fi", "Wi-Fi + 5G"]
     },
@@ -130,7 +130,7 @@ const data = {
       image: "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-b8e5fec/wp-content/uploads/2022/03/ipad-air-4.png",
       price: "14.490.000",
       oldprice: "15.990.000",
-      Capacity: ["64GB", "256GB"],
+      capacity: ["64GB", "256GB"],
       color: ["Space Gray", "silver", "Green", "Sky blue", "Pink"],
       Model: ["Wi-Fi", "Wi-Fi + 4G"]
     },
@@ -191,7 +191,7 @@ const data = {
       price: "71.990.000",
       oldprice: "",
       color: ["Space Gray", "silver"],
-      Capacity: ["512GB", "1TB"],
+      capacity: ["512GB", "1TB"],
       Ram: ["32GB", "64GB"],
       CPU: ["24-core", "32-core"]
     },
@@ -202,7 +202,7 @@ const data = {
       price: "89.950.000",
       oldprice: "90.550.000",
       color: ["Space Gray", "silver"],
-      Capacity: ["1TB"],
+      capacity: ["1TB"],
       Ram: ["32GB", "64GB"],
       GPU: ["32-core"]
     },

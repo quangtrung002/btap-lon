@@ -10,6 +10,7 @@ import Sale from '../page/sale/index'
 import Installment from '../page/installment/index'
 import Carts from "../page/cart/index"
 import NotFound from "../page/notFound/index"
+import Admin from "../page/admin/index"
 
 const publicRoutes = [
   {path : "/", component : Home},
@@ -23,7 +24,8 @@ const publicRoutes = [
   {path : "/khuyen-mai", component : Sale},
   {path : "/tra-gop", component : Installment },
   {path : "/cart", component : Carts },
-  {path : "*", component : NotFound }
+  {path : "*", component : NotFound },
+  {path : "/admin", component : Admin}
 ]
 
 export default publicRoutes
