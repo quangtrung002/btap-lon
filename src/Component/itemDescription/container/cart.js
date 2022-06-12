@@ -19,14 +19,17 @@ function Cart({ item }) {
     }))
   }, [count])
 
-  console.log(inforItem)
   const handleUpCount = () => setCount(count + 1)
   const handleDownCount = () => count > 1 ? setCount(count - 1) : ""
   const handAddCart = useCallback((id, image, name, color, capacity, price, amount, totalPrice) => {
-    const itemCart = {
-      id, image, name, color, capacity, price, amount, totalPrice
-    }
-    setCarts([...carts, itemCart])
+    setCarts(carts.map(obj => {
+      if (obj.name.toLowerCase() === item.name.toLowerCase()) {
+        return {
+          ...obj,
+          amount: obj.amount + 1
+        }
+      }
+    }))
   }, [carts])
 
 
