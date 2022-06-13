@@ -31,81 +31,81 @@
     .cardAll {
         display: flex;
         .cardofphone {
-            .card {
-                position: relative;
-                border: 1px solid transparent;
-                border-radius: 8px;
-                cursor: pointer;
-
-                &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                }
-
-                .cardImg {
-                    width: 80%;
-                    height: 100%;
-                    margin: 0 auto;
-                    object-fit: cover;
-                }
-
-                .cardBody {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                }
-
-                .cardTitle {
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: normal;
-                    -webkit-line-clamp: 2;
-                    color: var(--color-title);
-                    font-size: 18px;
-                    font-weight: bold;
-                    line-height: 27px;
-                    min-height: 54px;
-                }
-
-                .cardPrice {
-                    .cardOldPrice {
-                        color: var(--color-price-old);
-                        font-weight: normal;
-                        font-size: 14px;
-                        line-height: 26px;
-                    }
-
-                    .cardNewPrice {
-                        color: var(--color-price);
-                        font-size: 15px;
-                        line-height: 26px;
-                        font-weight: 700;
-                    }
-
-                    .dong {
-                        font-size: 12px;
-                        position: relative;
-                        top: -4px;
-                        left: 2px;
-                    }
-                }
-
-                .cardSale {
-                    position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    display: inline-block;
-                    padding: 5px;
-                    border-radius: 2px;
-                    background-color: #f46813;
-                    color: #fff;
-                    font-size: 12px;
-                    line-height: 1;
-                }
-
-            }
         }
     }
+    
+    .card {
+        position: relative;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        cursor: pointer;
 
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .cardImg {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+        .cardBody {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .cardTitle {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-line-clamp: 2;
+            color: var(--color-title);
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 27px;
+            min-height: 54px;
+        }
+
+        .cardPrice {
+            .cardOldPrice {
+                color: var(--color-price-old);
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 26px;
+            }
+
+            .cardNewPrice {
+                color: var(--color-price);
+                font-size: 15px;
+                line-height: 26px;
+                font-weight: 700;
+            }
+
+            .dong {
+                font-size: 12px;
+                position: relative;
+                top: -4px;
+                left: 2px;
+            }
+        }
+
+        .cardSale {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 2px;
+            background-color: #f46813;
+            color: #fff;
+            font-size: 12px;
+            line-height: 1;
+        }
+
+    }
 }
