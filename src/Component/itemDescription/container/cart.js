@@ -21,18 +21,28 @@ function Cart({ item }) {
 
   const handleUpCount = () => setCount(count + 1)
   const handleDownCount = () => count > 1 ? setCount(count - 1) : ""
-  const handAddCart = useCallback((id, image, name, color, capacity, price, amount, totalPrice) => {
-    setCarts(carts.map(obj => {
-      if (obj.name.toLowerCase() === item.name.toLowerCase()) {
-        return {
-          ...obj,
-          amount: obj.amount + 1
-        }
+  const handAddCart = (id, image, name, color, capacity, price, amount, totalPrice) => {
+    let checkItem = false
+    carts.forEach(obj => {
+      if (obj.name.toLowerCase() === name.toLowerCase() && obj.color === color && obj.capacity === capacity) {
+        checkItem = true
       }
-    }))
-  }, [carts])
+    })
+    checkItem
+      ? setCarts(carts.map(obj => {
+        if (obj.name.toLowerCase() === name.toLowerCase() && obj.color === color && obj.capacity === capacity) {
+          return {
+            ...obj,
+            amount: obj.amount + 1
+          }
+        }
+        return obj
+      }))
+      : setCarts([...carts, { id, image, name, color, capacity, price, amount, totalPrice }])
 
+  }
 
+  console.log(carts)
   return (
     <div className={clsx(style.cart, "d-flex gap-3 mt-4")}>
       <div className='d-flex align-items-center bg-light gap-3 py-1 px-2 border rounded-3'>
@@ -51,7 +61,9 @@ function Cart({ item }) {
       <button
         className={clsx(style.btnAdd, "btn rounded-5 text-light text-uppercase fw-bold fs-6 px-5")}
         onClick={() => {
-          handAddCart()
+          const { id, image, name, color, capacity, price, amount, totalPrice } = inforItem[inforItem.length - 1]
+          console.log(inforItem)
+          handAddCart(id, image, name, color, capacity, price, amount, totalPrice)
         }}
       >
         thêm vào giỏ hàng
