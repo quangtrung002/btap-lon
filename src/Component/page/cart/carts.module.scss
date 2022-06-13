@@ -1,16 +1,70 @@
-:root{
-  --color-heading : #2d2d2d;
-  --color-heading-1 : #1d1d1f;
+:root {
+  --color-heading: #2d2d2d;
+  --color-heading-1: #1d1d1f;
   --color-danger: #bf4800;
-  --white-color : #fff;
-  --black-color : #000;
-  --color-primary : #0066cc; 
-  --border-color : #d2d2d7;
+  --white-color: #fff;
+  --black-color: #000;
+  --color-primary: #0066cc;
+  --border-color: #d2d2d7;
+  --bg-notifiEmpty: #0066cc0d;
+  --bg-notifiNotEmpty: #fafbf5
 }
 
 
-.firstLetter{
-  &::first-letter{
+.firstLetter {
+  &::first-letter {
     text-transform: capitalize;
+  }
+}
+
+.notificationEmpty {
+  background-color: var(--bg-notifiEmpty);
+  border-style: solid;
+  border-width: 0px 0px 0px 4px;
+  border-color: var(--color-primary);
+  padding: 14px 0;
+
+  .icon {
+    color: var(--color-primary);
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .label {
+    color: var(--color-heading);
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+.notificationNotEmpty {
+  background-color: var(--bg-notifiNotEmpty);
+  border-style: solid;
+  border-width: 0px 0px 0px 4px;
+  border-color: #339901;
+  padding: 14px 0;
+
+  .icon {
+    color: #339901;
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .label {
+    color: var(--color-heading);
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+.cart{
+  .tableItem{
+    tbody{
+      .img{
+        width: 30%;
+        height: 30%;
+        object-fit: cover;
+      }
+    }
   }
 }

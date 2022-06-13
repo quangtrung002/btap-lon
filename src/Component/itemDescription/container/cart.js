@@ -7,7 +7,7 @@ import style from "../itemDes.module.scss"
 
 function Cart({ item }) {
   const [count, setCount] = useState(1)
-  const [, , carts, setCarts] = useContext(themeContextApp)
+  const [amountItems, setAmountItems, carts, setCarts] = useContext(themeContextApp)
   const [inforItem, setInforItem] = useContext(themeInforItem)
   useEffect(() => {
     setInforItem(inforItem.map(obj => {
@@ -64,6 +64,8 @@ function Cart({ item }) {
           const { id, image, name, color, capacity, price, amount, totalPrice } = inforItem[inforItem.length - 1]
           console.log(inforItem)
           handAddCart(id, image, name, color, capacity, price, amount, totalPrice)
+          setAmountItems(amountItems + 1)
+          alert("Thêm sản phẩm thành công")
         }}
       >
         thêm vào giỏ hàng
