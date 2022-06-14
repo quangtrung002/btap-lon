@@ -1,9 +1,9 @@
-import React, { memo, useCallback } from 'react'
+import React, { memo, useCallback, useEffect } from 'react'
 
 import clsx from 'clsx'
 import style from './carts.module.scss'
 
-function Container({ carts }) {
+function Container({ carts, setCarts }) {
 
   const handlePrice = useCallback((num) => {
     let resultPrice = ""
@@ -21,7 +21,43 @@ function Container({ carts }) {
     }
     return resultPrice.substring(0, resultPrice.length - 1)
   }, [])
+  const handleItem = (carts, id, payload) => {
+    switch (payload) {
+      case "up":
+        return carts.map(obj => {
+          if (obj.id === id) {
+            return {
+              ...obj,
+              amount: obj.amount + 1,
+              totalPrice: (obj.amount + 1) * Number(obj.price.split(".").join(""))
+            }
+          }
+          return obj
+        })
+      case "down":
+        return carts.map(obj => {
+          if (obj.id === id) {
+            if (obj.amount === 1) {
+              return obj
+            }
+            return {
+              ...obj,
+              amount: obj.amount - 1,
+              totalPrice: (obj.amount - 1) * Number(obj.price.split(".").join(""))
+            }
+          }
+          return obj
+        })
+      default:
+        throw new Error("Invalid value")
+    }
+  }
 
+  const handleTotalPrice = useCallback((carts) => {
+    const total = carts.reduce((initValue, obj) => initValue + obj.totalPrice, 0)
+    return handlePrice(total.toString())
+  }, [carts])
+  const resultPriceTotal = handleTotalPrice(carts)
 
   return (
     <>
@@ -71,13 +107,27 @@ function Container({ carts }) {
                       </div>
                       <div className='col-1'>
                         <div className='d-flex justify-content-around align-items-center border rounded-5'>
-                          <span className={clsx(style.amount)}>1</span>
+                          <span className={clsx(style.amount)}>{obj.amount}</span>
                           <div className='d-flex flex-column'>
                             <span>
-                              <i className={clsx(style.btnUp, "bi bi-caret-up-fill m-0 p-0")}></i>
+                              <i
+                                className={clsx(style.btnUp, "bi bi-caret-up-fill m-0 p-0")}
+                                onClick={() => {
+                                  const newArray = handleItem(carts, obj.id, "up")
+                                  setCarts(newArray)
+                                }}>
+                              </i>
                             </span>
                             <span>
-                              <i className={clsx(style.btnDown, "bi bi-caret-down-fill m-0 p-0")}></i>
+                              <i
+                                className={clsx(style.btnDown, "bi bi-caret-down-fill m-0 p-0")}
+                                onClick={() => {
+                                  const newArray = handleItem(carts, obj.id, "down")
+                                  setCarts(newArray)
+                                  console.log(carts)
+                                }}
+                              >
+                              </i>
                             </span>
                           </div>
                         </div>
@@ -94,8 +144,38 @@ function Container({ carts }) {
             </div>
           </div>
           <div className="col">
-            <div className='border'>
-              giỏ hàng
+            <div className='border p-4'>
+              <h1 className={clsx(style.firstLetter, 'fs-6 fw-bold ')}>tổng giỏ hàng</h1>
+              <div className='d-flex justify-content-between mt-4 mb-5'>
+                <p className={clsx(style.firstLetter, style.labelFontSize, "fw-bold")}>tạm tính:</p>
+                <span className={clsx(style.resultTotal, "fw-bold fs-6")}>
+                  {resultPriceTotal}đ
+                </span>
+              </div>
+              <div className='border-bottom pb-2'>
+                <h1 className={clsx(style.firstLetter, style.labelFontSize, "fw-bold mb-2")}>giao hàng</h1>
+                <div class="form-check">
+                  <input className={clsx(style.notBoxShadow, "form-check-input")} type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                  <label className={clsx(style.firstLetter, style.labelFontSize, "form-check-label")} for="flexRadioDefault1">
+                    nhận máy tại cửa hàng
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input className={clsx(style.notBoxShadow, "form-check-input")} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                  <label className={clsx(style.firstLetter, style.labelFontSize, "form-check-label")} for="flexRadioDefault1">
+                    nhận máy tại nhà
+                  </label>
+                </div>
+              </div>
+              <div className='d-flex justify-content-between mt-3'>
+                <p className={clsx(style.firstLetter, style.labelFontSize, "fw-bold")}>tổng:</p>
+                <span className={clsx(style.resultTotal, "fw-bold fs-6")}>{resultPriceTotal}đ</span>
+              </div>
+              <button
+                className={clsx(style.firstLetter, style.notBoxShadow, style.labelFontSize,style.btnTotal, "btn border rounded-5 mt-4 text-center fw-bold text-light fs-6")}
+              >
+                thanh toán
+              </button>
             </div>
           </div>
         </div>

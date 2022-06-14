@@ -85,17 +85,42 @@
       color: var(--color-heading);
       font-size: 14px;
     }
-    .price, .totalPrice, .amount{
+
+    .price,
+    .totalPrice,
+    .amount {
       color: var(--color-heading-1);
     }
-    .btnUp, .btnDown{
-        font-size: 12px;
-        opacity: .8;
-        cursor: pointer;
 
-        &:hover {
-          opacity: 1;
-        }
+    .btnUp,
+    .btnDown {
+      font-size: 12px;
+      opacity: .8;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
     }
+  }
+}
+
+.resultTotal{
+  color: var(--color-primary);
+}
+.labelFontSize {
+  font-size: 14px;
+}
+.notBoxShadow{
+  &:focus{
+    box-shadow: none;
+  }
+}
+.btnTotal{
+  padding: 15px 0;
+  background-color: var(--color-primary);
+  width: 100%;
+  &:hover{
+    opacity: .85;
   }
 }

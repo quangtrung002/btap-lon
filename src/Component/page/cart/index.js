@@ -15,8 +15,8 @@ function Carts() {
   return (
     <div className='container-fluid py-5' >
       <h1 className={clsx(style.title, style.firstLetter, "text-center fs-2 mb-3")}>giỏ hàng</h1>
-      <Notification carts = {carts}/>
-      <Container carts = {carts} />
+      <Notification carts={carts} />
+      <Container carts={carts} setCarts={setCarts} />
     </div>
   )
 }
