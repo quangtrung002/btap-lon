@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 
 import clsx from 'clsx'
 import style from "./itemDes.module.scss"
@@ -13,10 +13,12 @@ import Gift from './container/gift'
 import { createContext } from 'react'
 
 function ItemDescription({ item, heading }) {
-  const backToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-  backToTop()
+  useEffect(() => {
+    const backToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    backToTop()
+  }, [])
 
   const [inforItem, setInforItem] = useState([{
     id: item.id,

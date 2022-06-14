@@ -12,9 +12,9 @@ function Item({ heading, items, button, path }) {
   return (
     <div className={clsx("text-center")}>
       <h1 className={clsx(style.heading)}>{heading}</h1>
-      <div className='row g-lg-4 g-md-3'>
+      <div className='row g-3 g-xs-3 g-sm-3 g-md-3 g-lg-4 '>
         {items.slice(0, 4).map((item, index) => (
-          <Link to={`/${heading.toLowerCase() + '/' + item.id}`} className='col col-md-6 col-lg-3' key={index}>
+          <Link to={`/${heading.toLowerCase() + '/' + item.id}`} className='col-xs-12 col-sm-6 col-md-6 col-lg-3' key={index}>
             <div className={clsx(style.card, "card text-start")}>
               <img
                 src={item.image}

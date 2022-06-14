@@ -96,11 +96,11 @@ function PageItem({ heading, pathImg, allitem, posts }) {
             {/* Xem chi tiet may */}
           </div>
         </div>
-        <div className="row g-3">
+        <div className="row g-3 g-xs-3 g-sm-3 g-md-3 g-lg-4 ">
           {posts.map((item, index) => (
             <Link
               to={`/${heading.toLowerCase() + "/" + item.id}`}
-              className="col col-md-6 col-lg-3"
+              className="col-xs-12 col-sm-6 col-md-6 col-lg-3"
               key={index}
             >
               <div className={clsx(style.card, "card text-start")}>
