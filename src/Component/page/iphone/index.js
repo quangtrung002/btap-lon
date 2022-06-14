@@ -3,7 +3,7 @@ import PageItem from "../pageItem/pageItem";
 import { data } from "../../../data";
 
 export default function Iphone() {
-  const allitem = ["tat ca", '3', '4']
+  const allitem = ["Tất cả", 'iPhone 13', 'iPhone 12','iPhone 11','iPhone SE']
   
   return (
     <>

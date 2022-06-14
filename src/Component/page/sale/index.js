@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Sale() {
   return (
-    <div>
+    <h1>
       Sale
-    </div>
+    </h1>
   )
 }

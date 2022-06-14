@@ -4,7 +4,7 @@ import PageItem from "../pageItem/pageItem";
 import { data } from "../../../data";
 
 export default function Ipad() {
-  const allitem = ["tat ca", '3', '4']
+  const allitem = ["Tất cả", 'iPad Pro', 'iPad Air','iPad 9','iPad Mini']
   return (
     <>
       <PageItem  
