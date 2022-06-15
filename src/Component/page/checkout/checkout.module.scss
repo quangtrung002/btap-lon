@@ -1,0 +1,58 @@
+.firstLetter {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.notificationEmpty {
+  background-color: #0066cc0d;
+  border-style: solid;
+  border-width: 0px 0px 0px 4px;
+  border-color: #0066cc;
+  padding: 14px 0;
+
+  .icon {
+    color: #0066cc;
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .label {
+    color: #2d2d2d;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+.checkout {
+  .inforCarts {
+    display: inline-block !important;
+    background-color: #fff !important;
+    min-width: 200px;
+    margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+
+    .title {
+      color: #0066cc;
+      font-size: 18px;
+    }
+
+    .img {
+      width: 20%;
+      object-fit: cover;
+    }
+
+    .name,
+    .color,
+    .capacity,
+    span {
+      font-size: 14px;
+    }
+    input{
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+}
