@@ -1,4 +1,5 @@
 import React, { memo, useCallback, useEffect } from 'react'
+import { Link } from "react-router-dom"
 
 import clsx from 'clsx'
 import style from './carts.module.scss'
@@ -48,6 +49,8 @@ function Container({ carts, setCarts }) {
           }
           return obj
         })
+      case "delete":
+        return carts.filter(obj => obj.id !== id)
       default:
         throw new Error("Invalid value")
     }
@@ -82,7 +85,15 @@ function Container({ carts, setCarts }) {
                       key={index}
                     >
                       <div className='col-1'>
-                        <i className={clsx(style.btnDelete, "bi bi-x")}></i>
+                        <i
+                          className={clsx(style.btnDelete, "bi bi-x")}
+                          onClick={() => {
+                            const newArray = handleItem(carts, obj.id, "delete")
+                            setCarts(newArray)
+                          }}
+                        >
+
+                        </i>
                       </div>
                       <div className='col'>
                         <img
@@ -171,11 +182,13 @@ function Container({ carts, setCarts }) {
                 <p className={clsx(style.firstLetter, style.labelFontSize, "fw-bold")}>tổng:</p>
                 <span className={clsx(style.resultTotal, "fw-bold fs-6")}>{resultPriceTotal}đ</span>
               </div>
-              <button
-                className={clsx(style.firstLetter, style.notBoxShadow, style.labelFontSize,style.btnTotal, "btn border rounded-5 mt-4 text-center fw-bold text-light fs-6")}
-              >
-                thanh toán
-              </button>
+              <Link to="/checkout">
+                <button
+                  className={clsx(style.firstLetter, style.notBoxShadow, style.labelFontSize, style.btnTotal, "btn border rounded-5 mt-4 text-center fw-bold text-light fs-6")}
+                >
+                  thanh toán
+                </button>
+              </Link>
             </div>
           </div>
         </div>

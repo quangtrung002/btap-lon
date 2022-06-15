@@ -1,11 +1,6 @@
 :root {
-  --color-heading: #2d2d2d;
-  --color-heading-1: #1d1d1f;
-  --color-danger: #bf4800;
   --white-color: #fff;
   --black-color: #000;
-  --color-primary: #0066cc;
-  --border-color: #d2d2d7;
   --bg-notifiEmpty: #0066cc0d;
   --bg-notifiNotEmpty: #fafbf5
 }
@@ -21,17 +16,17 @@
   background-color: var(--bg-notifiEmpty);
   border-style: solid;
   border-width: 0px 0px 0px 4px;
-  border-color: var(--color-primary);
+  border-color: #0066cc;
   padding: 14px 0;
 
   .icon {
-    color: var(--color-primary);
+    color: #0066cc;
     font-size: 15px;
     padding: 0 15px;
   }
 
   .label {
-    color: var(--color-heading);
+    color: #2d2d2d;
     font-weight: 400;
     font-size: 15px;
   }
@@ -51,7 +46,7 @@
   }
 
   .label {
-    color: var(--color-heading);
+    color: #2d2d2d;
     font-weight: 400;
     font-size: 15px;
   }
@@ -61,7 +56,7 @@
   .tableItem {
     .btnDelete {
       font-size: 25px;
-      color: var(--color-heading-1);
+      color: #1d1d1f;
       opacity: .85;
 
       &:hover {
@@ -82,14 +77,14 @@
 
     .color,
     .capacity {
-      color: var(--color-heading);
+      color: #2d2d2d;
       font-size: 14px;
     }
 
     .price,
     .totalPrice,
     .amount {
-      color: var(--color-heading-1);
+      color: #1d1d1f;
     }
 
     .btnUp,
@@ -106,7 +101,7 @@
 }
 
 .resultTotal{
-  color: var(--color-primary);
+  color: #0066cc;
 }
 .labelFontSize {
   font-size: 14px;
@@ -118,7 +113,7 @@
 }
 .btnTotal{
   padding: 15px 0;
-  background-color: var(--color-primary);
+  background-color: #0066cc;
   width: 100%;
   &:hover{
     opacity: .85;

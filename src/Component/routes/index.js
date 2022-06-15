@@ -11,21 +11,24 @@ import Installment from '../page/installment/index'
 import Carts from "../page/cart/index"
 import NotFound from "../page/notFound/index"
 import Admin from "../page/admin/index"
+import Checkout from "../page/checkout/index"
 
 const publicRoutes = [
-  {path : "/", component : Home},
-  {path : "/iphone", component : Iphone},
-  {path : "/ipad", component : Ipad},
-  {path : "/mac", component : Mac},
-  {path : "/apple-watch", component : AppleWatch },
-  {path : "/am-thanh", component : Sound },
-  {path : "/phu-kien", component : Accessory},
-  {path : "/dich-vu", component : Service},
-  {path : "/khuyen-mai", component : Sale},
-  {path : "/tra-gop", component : Installment },
-  {path : "/cart", component : Carts },
-  {path : "*", component : NotFound },
-  {path : "/admin", component : Admin}
+  { path: "/", component: Home },
+  { path: "/iphone", component: Iphone },
+  { path: "/ipad", component: Ipad },
+  { path: "/mac", component: Mac },
+  { path: "/apple-watch", component: AppleWatch },
+  { path: "/am-thanh", component: Sound },
+  { path: "/phu-kien", component: Accessory },
+  { path: "/dich-vu", component: Service },
+  { path: "/khuyen-mai", component: Sale },
+  { path: "/tra-gop", component: Installment },
+  { path: "/cart", component: Carts },
+  { path: "*", component: NotFound },
+  { path: "/admin", component: Admin },
+  { path: "/checkout", component: Checkout }
 ]
+
 
 export default publicRoutes
