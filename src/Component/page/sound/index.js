@@ -9,7 +9,7 @@ export default function Sound() {
     <>
       <PageItem  
         heading = "Âm Thanh"
-        pathImg = "https://shopdunk.com/wp-content/uploads/2022/05/ip13green_Banner-PC.jpg"
+        pathImg = "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/2022/04/JBL-banner_Banner-PC-copy-1.jpg"
         allitem={allitem}
         posts = {data.airpods}
       />

@@ -85,17 +85,19 @@ function PageItem({ heading, pathImg, allitem, posts }) {
               {allitem.map((item) => (
                 <button
                   type="button"
-                  class="btn btn-outline-secondary"
+                  className={clsx(
+                    style.Chonkhungnho,
+                    "btn btn-outline-secondary"
+                  )}
                   disabled=""
                 >
                   {item}
                 </button>
               ))}
             </div>
-
-            {/* Xem chi tiet may */}
           </div>
         </div>
+        {/* Xem chi tiet may */}
         <div className="row g-3 g-xs-3 g-sm-3 g-md-3 g-lg-4 ">
           {posts.map((item, index) => (
             <Link
@@ -116,9 +118,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
                   <p className={clsx(style.cardPrice, "card-text")}>
                     {item.price && item.oldprice ? (
                       <>
-                        <del
-                          className={clsx(style.cardOldPrice, "me-2")}
-                        >
+                        <del className={clsx(style.cardOldPrice, "me-2")}>
                           {item.oldprice}
                           <span className={clsx(style.dong)}>đ</span>
                         </del>
@@ -141,10 +141,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
                   </p>
                   {item.sale && (
                     <div
-                      className={clsx(
-                        style.cardSale,
-                        style.firstLetter
-                      )}
+                      className={clsx(style.cardSale, style.firstLetter)}
                     >{`giảm ${item.sale}`}</div>
                   )}
                 </div>

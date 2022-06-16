@@ -9,7 +9,7 @@ export default function Ipad() {
     <>
       <PageItem  
         heading = "ipad"
-        pathImg = "src"
+        pathImg = "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/2022/06/Danh-muc-PC-3-1.jpg"
         allitem={allitem}
         posts = {data.ipad}
       />
