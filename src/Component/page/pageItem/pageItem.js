@@ -1,11 +1,16 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 
 import clsx from "clsx";
 import style from "./pageItem.module.scss";
 import { Link } from "react-router-dom";
 
 function PageItem({ heading, pathImg, allitem, posts }) {
-  console.log(posts);
+  useEffect(() => {
+    const backToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+    backToTop()
+  }, [])
 
   return (
     <div className={clsx(style.wrap)}>
@@ -82,7 +87,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
 
             {/* thanh chon loai may */}
             <div className={clsx(style.Chonmay, "d-flex gap-2")}>
-              {allitem.map((item) => (
+              {allitem.map((item, index) => (
                 <button
                   type="button"
                   className={clsx(
@@ -90,6 +95,7 @@ function PageItem({ heading, pathImg, allitem, posts }) {
                     "btn btn-outline-secondary"
                   )}
                   disabled=""
+                  key={index}
                 >
                   {item}
                 </button>
