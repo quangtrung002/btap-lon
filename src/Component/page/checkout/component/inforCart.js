@@ -5,12 +5,12 @@ import style from "../checkout.module.scss"
 
 function InforCart({ carts }) {
   return (
-    <div className={clsx(style.inforCarts, "d-inline-block justify-content-center bg-light p-5 mt-3")}>
+    <div className={clsx(style.inforCarts, " bg-light px-5 py-4 mt-3")} id="#">
       <h1 className={clsx(style.firstLetter, style.title, "fw-bold")}>đơn hàng của bạn</h1>
       <h2 className={clsx(style.firstLetter, "fw-bold text-dark fs-6 my-3")}>sản phẩm</h2>
       {
         carts.map(obj => (
-          <div className='d-flex flex-column'>
+          <div className='d-flex flex-column' key={obj.id}>
             <img className={clsx(style.img)} src={obj.image} alt="loi" />
             <label className={clsx(style.name)}>{`${obj.name} x ${obj.amount}`}</label>
             <p className={clsx(style.color)}>
