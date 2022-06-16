@@ -1,14 +1,21 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 import './App.css';
 import Contact from './Component/contact';
 import Container from './Component/container';
 import Footer from './Component/footer';
 import Navbar from './Component/navbar';
+import { data } from './data';
 
 function App() {
   const [amountItems, setAmountItems] = useState(0)
   const [carts, setCarts] = useState([])
+  useEffect(() => {
+    const getLocalStorage = ()=>{
+      localStorage.setItem("data", JSON.stringify(data))
+    }
+    getLocalStorage()
+  }, [])
 
   return (
     <themeContextApp.Provider

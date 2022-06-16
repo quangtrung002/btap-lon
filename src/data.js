@@ -1134,11 +1134,41 @@ const slider = [
 
 ]
 
-const footer = [
-
+const customer = [
+  {
+    id: "",
+    name: "",
+    phone: "",
+    address: "",
+    email: "",
+    sold: [
+      {
+        nameProduct: "",
+        color: "",
+        capacity: "", //dung lượng
+        amount : 1,
+        dayBuy: ""
+      },
+      {
+        nameProduct: "",
+        color: "",
+        capacity: "",
+        amount : 3,
+        dayBuy: ""
+      }
+    ]
+  }
 ]
 
-export { data, navbar, slider, footer }
+const visiter = [
+  {
+    id: "",
+    amount: 0,
+    dayBuy: ""
+  }
+]
+
+export { data, navbar, slider, customer, visiter }
 
 
 
