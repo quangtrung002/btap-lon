@@ -1,18 +1,36 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useCallback, useRef, useState } from 'react'
 
 import clsx from "clsx"
 import style from "./customer.module.scss"
 
 function Customer() {
   const [customer, setCusTomer] = useState(JSON.parse(localStorage.getItem("customer")))
-  console.log(customer)
-
+  const refInputFind = useRef()
+  const handleFindCustomer = (payloadValue) => {
+    const newArray = customer.filter(obj =>
+      obj.id.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
+      || obj.name.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
+      || obj.phone.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
+      || obj.address.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
+      || obj.email.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
+    )
+    setCusTomer(newArray)
+  }
   return (
     <div className={clsx(style.customer, "py-3")}>
       <h1 className={clsx(style.heading, " mb-3 fs-4 text-center fw-bold text-uppercase")}>quản lý khách hàng</h1>
       <div className='d-flex justify-content-end gap-2 mb-3'>
-        <input placeholder='Search ...' className={clsx(style.firstLetter, style.input)} />
-        <button className={clsx(style.firstLetter, style.btnFind)}>tìm kiếm</button>
+        <input
+          className={clsx(style.firstLetter, style.input)}
+          placeholder='Search ...'
+          ref={refInputFind}
+        />
+        <button
+          className={clsx(style.firstLetter, style.btnFind)}
+          onClick={() => handleFindCustomer(refInputFind.current.value)}
+        >
+          tìm kiếm
+        </button>
       </div>
       <table class="table table-bordered">
         <thead>
@@ -27,7 +45,7 @@ function Customer() {
         </thead>
         <tbody>
           {customer.map(obj => {
-            const sold = obj.sold.reduce((initValue, item) => initValue + item.amount ,0)
+            const sold = obj.sold.reduce((initValue, item) => initValue + item.amount, 0)
             return (
               <tr key={obj.id}>
                 <td className={clsx(style.label)}>{obj.id}</td>
