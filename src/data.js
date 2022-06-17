@@ -1496,13 +1496,275 @@ const customer = [
       },
     ],
   },
+  {
+    id: "1A1124",
+    name: "Trần Thị Hương Chà",
+    phone: "0351278991",
+    address: "Nam Định",
+    email: "huongcha156@gmail.com",
+    sold: [
+      {
+        nameProduct: "Tay cầm chơi game SteelSeries Nimbus+",
+        color: "",
+        capacity: "", //dung lượng
+        amount: 4,
+        dayBuy: "January",
+      },
+      {
+        nameProduct: "iPad mini 6 (2021)",
+        color: "Purple",
+        capacity: "64GB",
+        amount: 1,
+        dayBuy: "August",
+      },
+    ],
+  },
+  {
+    id: "1A1125",
+    name: "Ngô Gia Anh",
+    phone: "0353861920",
+    address: "Bình Phước",
+    email: "giangoanh@gmail.com",
+    sold: [
+      {
+        nameProduct: "iPad Pro 12.9 inch (M1, 2021)",
+        color: "Space Gray",
+        capacity: "2TB", //dung lượng
+        amount: 1,
+        dayBuy: "November",
+      },
+      {
+        nameProduct: "iPhone 11",
+        color: "Yellow",
+        capacity: "64GB",
+        amount: 1,
+        dayBuy: "February",
+      },
+      {
+        nameProduct: "AirPods 2",
+        color: "",
+        capacity: "",
+        amount: 3,
+        dayBuy: "July",
+      },
+      {
+        nameProduct: "Apple Watch Series 3",
+        color: "Space Gray",
+        capacity: "38mm", //dung lượng
+        amount: 2,
+        dayBuy: "April",
+      },
+    ],
+  },
+  {
+    id: "1A1126",
+    name: "Nguyễn Phương Anh",
+    phone: "0396617281",
+    address: "Quang Trung, Hà Nội",
+    email: "anhphuongng768@gmail.com",
+    sold: [
+      {
+        nameProduct:
+          "Dây đeo Apple Watch Uniq-Dante Mesh Steel Strap 42/44/45mm",
+        color: "Blue",
+        capacity: "",
+        amount: 5,
+        dayBuy: "December",
+      },
+    ],
+  },
 ];
 
 const visiter = [
   {
-    id: "",
-    amount: 0,
-    dayBuy: "",
+    id: "1123AFG",
+    amount: 28,
+    dayBuy: "Octorber",
+  },
+  {
+    id: "1GT145Y",
+    amount: 13,
+    dayBuy: "August",
+  },
+  {
+    id: "62TY67D",
+    amount: 2,
+    dayBuy: "June",
+  },
+  {
+    id: "992TTF3",
+    amount: 16,
+    dayBuy: "September",
+  },
+  {
+    id: "48DBC22",
+    amount: 59,
+    dayBuy: "November",
+  },
+  {
+    id: "692IPK3",
+    amount: 73,
+    dayBuy: "March",
+  },
+  {
+    id: "8826SSQ",
+    amount: 42,
+    dayBuy: "Apil",
+  },
+  {
+    id: "129HHK6",
+    amount: 33,
+    dayBuy: "February",
+  },
+  {
+    id: "77LLJ21",
+    amount: 1,
+    dayBuy: "May",
+  },
+  {
+    id: "483FVC2",
+    amount: 64,
+    dayBuy: "June",
+  },
+  {
+    id: "TFD776Y",
+    amount: 11,
+    dayBuy: "December",
+  },
+  {
+    id: "990PO6S",
+    amount: 8,
+    dayBuy: "December",
+  },
+  {
+    id: "527HHY8",
+    amount: 9,
+    dayBuy: "Octorber",
+  },
+  {
+    id: "1167JJI",
+    amount: 49,
+    dayBuy: "January",
+  },
+  {
+    id: "D446F3R",
+    amount: 52,
+    dayBuy: "February",
+  },
+  {
+    id: "187VXZ5",
+    amount: 12,
+    dayBuy: "February",
+  },
+  {
+    id: "DDR32S6",
+    amount: 81,
+    dayBuy: "November",
+  },
+  {
+    id: "245UFJ1",
+    amount: 18,
+    dayBuy: "May",
+  },
+  {
+    id: "415SFL7",
+    amount: 29,
+    dayBuy: "August",
+  },
+  {
+    id: "120SSR5",
+    amount: 1,
+    dayBuy: "June",
+  },
+  {
+    id: "526ALK8",
+    amount: 31,
+    dayBuy: "March",
+  },
+  {
+    id: "TFD765Y",
+    amount: 10,
+    dayBuy: "December",
+  },
+  {
+    id: "5317POI",
+    amount: 58,
+    dayBuy: "January",
+  },
+  {
+    id: "IO976P2",
+    amount: 6,
+    dayBuy: "May",
+  },
+  {
+    id: "GTS6198",
+    amount: 34,
+    dayBuy: "February",
+  },
+  {
+    id: "8192SSQ",
+    amount: 12,
+    dayBuy: "Apil",
+  },
+  {
+    id: "9367AQP",
+    amount: 36,
+    dayBuy: "Apil",
+  },
+  {
+    id: "TFD6798",
+    amount: 17,
+    dayBuy: "May",
+  },
+  {
+    id: "182JJF5",
+    amount: 17,
+    dayBuy: "June",
+  },
+  {
+    id: "2718FVX",
+    amount: 4,
+    dayBuy: "December",
+  },
+  {
+    id: "167F6SD",
+    amount: 5,
+    dayBuy: "November",
+  },
+  {
+    id: "815POI8",
+    amount: 33,
+    dayBuy: "February",
+  },
+  {
+    id: "8237TGF",
+    amount: 99,
+    dayBuy: "Apil",
+  },
+  {
+    id: "5127POI",
+    amount: 25,
+    dayBuy: "January",
+  },
+  {
+    id: "412FVC2",
+    amount: 44,
+    dayBuy: "June",
+  },
+  {
+    id: "2RTTS9I",
+    amount: 13,
+    dayBuy: "February",
+  },
+  {
+    id: "79LLJ81",
+    amount: 1,
+    dayBuy: "May",
+  },
+  {
+    id: "RE2545Y",
+    amount: 13,
+    dayBuy: "August",
   },
 ];
 
