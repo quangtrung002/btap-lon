@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
 
-function Product() {
+function Order() {
   return (
     <div>
-      product
+      Order
     </div>
   )
 }
 
-export default memo(Product)
+export default memo(Order)
