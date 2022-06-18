@@ -1232,6 +1232,7 @@ const customer = [
     email: "anhoai0310@gmail.com",
     sold: [
       {
+        idProduct: "12AS225",
         nameProduct: "iPhone 13",
         color: "Silver",
         capacity: "512GB", //dung lượng
@@ -1239,6 +1240,7 @@ const customer = [
         dayBuy: "July",
       },
       {
+        idProduct: "12AS226",
         nameProduct: "MacBook Pro 14 M1 Pro",
         color: "Silver",
         capacity: "512GB",
@@ -1255,6 +1257,7 @@ const customer = [
     email: "qtdaubuoi@gmail.com",
     sold: [
       {
+        idProduct: "12AS227",
         nameProduct: "iPhone SE",
         color: "startlight",
         capacity: "64GB", //dung lượng
@@ -1271,6 +1274,7 @@ const customer = [
     email: "oanhvytu@gmail.com",
     sold: [
       {
+        idProduct: "12AS227",
         nameProduct: "Apple Watch Series 3",
         color: "Space Gray",
         capacity: "38mm", //dung lượng
@@ -1287,6 +1291,7 @@ const customer = [
     email: "thuuyenyanh@gmail.com",
     sold: [
       {
+        idProduct: "12AS228",
         nameProduct: "iPhone 13 Pro Max",
         color: "Gold",
         capacity: "1TB",
@@ -1294,6 +1299,7 @@ const customer = [
         dayBuy: "June",
       },
       {
+        idProduct: "12AS229",
         nameProduct: "AirPods 2",
         color: "",
         capacity: "",
@@ -1310,6 +1316,7 @@ const customer = [
     email: "trangmonny278@gmail.com",
     sold: [
       {
+        idProduct: "12AS231",
         nameProduct: "iPad Pro 11 inch",
         color: "Silver",
         capacity: "256GB",
@@ -1317,6 +1324,7 @@ const customer = [
         dayBuy: "February",
       },
       {
+        idProduct: "12AS232",
         nameProduct:
           "Dây đeo Apple Watch Uniq-Dante Mesh Steel Strap 42/44/45mm",
         color: "Blue",
@@ -1334,6 +1342,7 @@ const customer = [
     email: "trinhdoan225@gmail.com",
     sold: [
       {
+        idProduct: "12AS233",
         nameProduct: "iPhone 12 mini",
         color: "White",
         capacity: "256GB",
@@ -1350,6 +1359,7 @@ const customer = [
     email: "anthle779@gmail.com",
     sold: [
       {
+        idProduct: "12AS234",
         nameProduct:
           "Dây đeo Apple Watch Uniq-Dante Mesh Steel Strap 38/40/41mm",
         color: "",
@@ -1358,6 +1368,7 @@ const customer = [
         dayBuy: "September",
       },
       {
+        idProduct: "12AS235",
         nameProduct: "iPad Pro 11 inch",
         color: "Silver",
         capacity: "256GB",
@@ -1365,6 +1376,7 @@ const customer = [
         dayBuy: "February",
       },
       {
+        idProduct: "12AS236",
         nameProduct: "AirPods Max",
         color: "Sky Blue",
         capacity: "",
@@ -1381,6 +1393,7 @@ const customer = [
     email: "ducanhttl@gmail.com",
     sold: [
       {
+        idProduct: "12AS237",
         nameProduct: "Apple Watch SE",
         color: "Silver",
         capacity: "44mm",
@@ -1388,6 +1401,7 @@ const customer = [
         dayBuy: "November",
       },
       {
+        idProduct: "12AS238",
         nameProduct: "iPad mini 6 (2021)",
         color: "Purple",
         capacity: "64GB",
@@ -1395,6 +1409,7 @@ const customer = [
         dayBuy: "August",
       },
       {
+        idProduct: "12AS239",
         nameProduct: "AirPods Max",
         color: "Sky Blue",
         capacity: "",
@@ -1402,6 +1417,7 @@ const customer = [
         dayBuy: "April",
       },
       {
+        idProduct: "12AS241",
         nameProduct: "iPhone 13 mini",
         color: "(PRODUCT) RED",
         capacity: "128GB",
@@ -1418,6 +1434,7 @@ const customer = [
     email: "baobaong@gmail.com",
     sold: [
       {
+        idProduct: "12AS242",
         nameProduct:
           "iMac 2020 21.5 inch - MHK33 (3.0 6C/8GB/ 256GB/RP560X-SOA)",
         color: "",
@@ -1435,6 +1452,7 @@ const customer = [
     email: "minhtrananh113g@gmail.com",
     sold: [
       {
+        idProduct: "12AS243",
         nameProduct: "iPad Pro 11 inch",
         color: "Silver",
         capacity: "256GB",
@@ -1442,6 +1460,7 @@ const customer = [
         dayBuy: "May",
       },
       {
+        idProduct: "12AS244",
         nameProduct: "Loa JBL PartyBox 310",
         color: "",
         capacity: "",
@@ -1458,6 +1477,7 @@ const customer = [
     email: "chichiluug@gmail.com",
     sold: [
       {
+        idProduct: "12AS245",
         nameProduct: "iPhone 12 mini",
         color: "White",
         capacity: "256GB",
@@ -1465,6 +1485,7 @@ const customer = [
         dayBuy: "January",
       },
       {
+        idProduct: "12AS246",
         nameProduct: "Mac mini M1",
         color: "",
         capacity: "256GB",
@@ -1481,6 +1502,7 @@ const customer = [
     email: "giaan225@gmail.com",
     sold: [
       {
+        idProduct: "12AS247",
         nameProduct: "Apple Watch Series 3",
         color: "Space Gray",
         capacity: "38mm", //dung lượng
@@ -1488,6 +1510,7 @@ const customer = [
         dayBuy: "January",
       },
       {
+        idProduct: "12AS248",
         nameProduct: "Beats Fit Pro True Wireless Earbuds",
         color: "Black",
         capacity: "",
@@ -1504,6 +1527,7 @@ const customer = [
     email: "huongcha156@gmail.com",
     sold: [
       {
+        idProduct: "12AS249",
         nameProduct: "Tay cầm chơi game SteelSeries Nimbus+",
         color: "",
         capacity: "", //dung lượng
@@ -1511,6 +1535,7 @@ const customer = [
         dayBuy: "January",
       },
       {
+        idProduct: "12AS251",
         nameProduct: "iPad mini 6 (2021)",
         color: "Purple",
         capacity: "64GB",
@@ -1527,6 +1552,7 @@ const customer = [
     email: "giangoanh@gmail.com",
     sold: [
       {
+        idProduct: "12AS252",
         nameProduct: "iPad Pro 12.9 inch (M1, 2021)",
         color: "Space Gray",
         capacity: "2TB", //dung lượng
@@ -1534,6 +1560,7 @@ const customer = [
         dayBuy: "November",
       },
       {
+        idProduct: "12AS253",
         nameProduct: "iPhone 11",
         color: "Yellow",
         capacity: "64GB",
@@ -1541,6 +1568,7 @@ const customer = [
         dayBuy: "February",
       },
       {
+        idProduct: "12AS254",
         nameProduct: "AirPods 2",
         color: "",
         capacity: "",
@@ -1548,6 +1576,7 @@ const customer = [
         dayBuy: "July",
       },
       {
+        idProduct: "12AS255",
         nameProduct: "Apple Watch Series 3",
         color: "Space Gray",
         capacity: "38mm", //dung lượng
@@ -1564,6 +1593,7 @@ const customer = [
     email: "anhphuongng768@gmail.com",
     sold: [
       {
+        idProduct: "12AS256",
         nameProduct:
           "Dây đeo Apple Watch Uniq-Dante Mesh Steel Strap 42/44/45mm",
         color: "Blue",
