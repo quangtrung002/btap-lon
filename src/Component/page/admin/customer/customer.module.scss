@@ -21,7 +21,13 @@
     border-color: #ccc;
   }
 }
-
+.reset{
+  background-color: transparent;
+  border-color: transparent;
+  &:hover{
+    color: #0066cc;
+  }
+}
 .btnFind {
   border-color: #ccc;
   border-radius: 4px;

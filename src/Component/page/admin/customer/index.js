@@ -5,6 +5,7 @@ import style from "./customer.module.scss"
 
 function Customer() {
   const [customer, setCusTomer] = useState(JSON.parse(localStorage.getItem("customer")))
+  const [valueInputFind, setValueInputFind] = useState("")
   const refInputFind = useRef()
   const handleFindCustomer = (payloadValue) => {
     const newArray = customer.filter(obj =>
@@ -19,17 +20,23 @@ function Customer() {
   return (
     <div className={clsx(style.customer, "py-3")}>
       <h1 className={clsx(style.heading, " mb-3 fs-4 text-center fw-bold text-uppercase")}>quản lý khách hàng</h1>
-      <div className='d-flex justify-content-end gap-2 mb-3'>
-        <input
-          className={clsx(style.firstLetter, style.input)}
-          placeholder='Search ...'
-          ref={refInputFind}
-        />
-        <button
-          className={clsx(style.firstLetter, style.btnFind)}
-          onClick={() => handleFindCustomer(refInputFind.current.value)}
-        >
-          tìm kiếm
+      <div className='d-flex justify-content-between mb-3'>
+        <div className='d-flex justify-content-start gap-2 mb-3'>
+          <input
+            className={clsx(style.firstLetter, style.input)}
+            placeholder='Search ...'
+            ref={refInputFind}
+            onChange = {e => setValueInputFind(e.target.value)}
+          />
+          <button
+            className={clsx(style.firstLetter, style.btnFind)}
+            onClick={() => handleFindCustomer(refInputFind.current.value)}
+          >
+            tìm kiếm
+          </button>
+        </div>
+        <button className={clsx(style.reset)} onClick = {()=> setCusTomer(JSON.parse(localStorage.getItem("customer")))}>
+          <i class="bi bi-arrow-repeat fs-4"></i>
         </button>
       </div>
       <table class="table table-bordered">
