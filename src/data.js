@@ -1238,6 +1238,8 @@ const customer = [
         capacity: "512GB", //dung lượng
         amount: 1,
         dayBuy: "July",
+        category: "iPhone",
+        price: '19.990.000'
       },
       {
         idProduct: "12AS226",
@@ -1246,6 +1248,8 @@ const customer = [
         capacity: "512GB",
         amount: 3,
         dayBuy: "Octorber",
+        category: "mac",
+        price: "57.990.000"
       },
     ],
   },
@@ -1259,10 +1263,12 @@ const customer = [
       {
         idProduct: "12AS227",
         nameProduct: "iPhone SE",
-        color: "startlight",
+        color: "Startlight",
         capacity: "64GB", //dung lượng
         amount: 1,
         dayBuy: "May",
+        category: "iPhone",
+        price: "10.990.000"
       },
     ],
   },
@@ -1280,6 +1286,8 @@ const customer = [
         capacity: "38mm", //dung lượng
         amount: 1,
         dayBuy: "January",
+        category: "apple watch",
+        price: "5.790.000"
       },
     ],
   },
@@ -1297,6 +1305,8 @@ const customer = [
         capacity: "1TB",
         amount: 2,
         dayBuy: "June",
+        category: "iPhone",
+        price: "28.990.000"
       },
       {
         idProduct: "12AS229",
@@ -1305,6 +1315,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "June",
+        category: "airpods",
+        price: "5.690.000"
       },
     ],
   },
@@ -1322,6 +1334,8 @@ const customer = [
         capacity: "256GB",
         amount: 1,
         dayBuy: "February",
+        category: "ipad",
+        price: "15.490.000"
       },
       {
         idProduct: "12AS232",
@@ -1331,6 +1345,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "April",
+        category: "apple watch",
+        price: "1.890.000"
       },
     ],
   },
@@ -1348,6 +1364,8 @@ const customer = [
         capacity: "256GB",
         amount: 1,
         dayBuy: "December",
+        category: "iPhone",
+        price: "14.900.000"
       },
     ],
   },
@@ -1366,6 +1384,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "September",
+        category: "apple watch",
+        price: "1.250.000"
       },
       {
         idProduct: "12AS235",
@@ -1374,6 +1394,8 @@ const customer = [
         capacity: "256GB",
         amount: 1,
         dayBuy: "February",
+        category: "ipad",
+        price: "19.890.000"
       },
       {
         idProduct: "12AS236",
@@ -1382,6 +1404,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "April",
+        category: "airpods",
+        price: "5.600.000"
       },
     ],
   },
@@ -1399,6 +1423,8 @@ const customer = [
         capacity: "44mm",
         amount: 1,
         dayBuy: "November",
+        category: "apple watch",
+        price: "5.690.000"
       },
       {
         idProduct: "12AS238",
@@ -1407,6 +1433,8 @@ const customer = [
         capacity: "64GB",
         amount: 1,
         dayBuy: "August",
+        category: "ipad",
+        price: "6.790.000"
       },
       {
         idProduct: "12AS239",
@@ -1415,6 +1443,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "April",
+        category: "aidpods",
+        price: "7.890.000"
       },
       {
         idProduct: "12AS241",
@@ -1423,6 +1453,8 @@ const customer = [
         capacity: "128GB",
         amount: 5,
         dayBuy: "March",
+        category: "iPhone",
+        price: "15.000.000"
       },
     ],
   },
@@ -1441,6 +1473,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "November",
+        category: "mac",
+        price: "5.600.000"
       },
     ],
   },
@@ -1458,6 +1492,8 @@ const customer = [
         capacity: "256GB",
         amount: 1,
         dayBuy: "May",
+        category: "ipad",
+        price: "7.890.000"
       },
       {
         idProduct: "12AS244",
@@ -1466,6 +1502,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "April",
+        category: "loa",
+        price: "1.200.000"
       },
     ],
   },
@@ -1483,6 +1521,8 @@ const customer = [
         capacity: "256GB",
         amount: 2,
         dayBuy: "January",
+        category: "iPhone",
+        price: "13.000.000"
       },
       {
         idProduct: "12AS246",
@@ -1491,6 +1531,8 @@ const customer = [
         capacity: "256GB",
         amount: 1,
         dayBuy: "February",
+        category: "mac",
+        price: "7.890.000"
       },
     ],
   },
@@ -1508,6 +1550,8 @@ const customer = [
         capacity: "38mm", //dung lượng
         amount: 1,
         dayBuy: "January",
+        category: "apple watch",
+        price: "4.560.000"
       },
       {
         idProduct: "12AS248",
@@ -1516,6 +1560,8 @@ const customer = [
         capacity: "",
         amount: 1,
         dayBuy: "July",
+        category: "loa",
+        price: "2.340.000"
       },
     ],
   },
@@ -1533,6 +1579,8 @@ const customer = [
         capacity: "", //dung lượng
         amount: 4,
         dayBuy: "January",
+        category: "tay cầm",
+        price: "2.500.000"
       },
       {
         idProduct: "12AS251",
@@ -1541,6 +1589,8 @@ const customer = [
         capacity: "64GB",
         amount: 1,
         dayBuy: "August",
+        category: 'ipad',
+        price: "6.790.000"
       },
     ],
   },
@@ -1558,6 +1608,8 @@ const customer = [
         capacity: "2TB", //dung lượng
         amount: 1,
         dayBuy: "November",
+        category: "ipad",
+        price: "7.890.000"
       },
       {
         idProduct: "12AS253",
@@ -1566,6 +1618,8 @@ const customer = [
         capacity: "64GB",
         amount: 1,
         dayBuy: "February",
+        category: "iPhone",
+        price: "11.450.000"
       },
       {
         idProduct: "12AS254",
@@ -1574,6 +1628,8 @@ const customer = [
         capacity: "",
         amount: 3,
         dayBuy: "July",
+        category: "airpods",
+        price: "4.560.000"
       },
       {
         idProduct: "12AS255",
@@ -1582,6 +1638,8 @@ const customer = [
         capacity: "38mm", //dung lượng
         amount: 2,
         dayBuy: "April",
+        category: "apple watch",
+        price: "4.560.000"
       },
     ],
   },
@@ -1600,6 +1658,8 @@ const customer = [
         capacity: "",
         amount: 5,
         dayBuy: "December",
+        category: "dây đeo apple watch",
+        price: "2.300.000"
       },
     ],
   },

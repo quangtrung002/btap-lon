@@ -25,8 +25,8 @@ function Customer() {
   }
   return (
     <div className={clsx(style.customer, "py-3")}>
-      <h1 className={clsx(style.heading, " mb-3 fs-4 text-center fw-bold text-uppercase")}>quản lý khách hàng</h1>
-      <div className='d-flex justify-content-between mb-3'>
+      <h1 className={clsx(style.heading, " mb-5 fs-1 text-center fw-bold text-uppercase")}>quản lý khách hàng</h1>
+      <div className='d-flex justify-content-between mb-4'>
         <div className='d-flex justify-content-start gap-2 mb-3'>
           <input
             className={clsx(style.firstLetter, style.input)}

@@ -10,6 +10,53 @@
   color: #2d2d2d;
 }
 
+.btnInforOrder {
+  cursor: pointer;
+
+  &:hover {
+    color: #0066cc;
+  }
+}
+
+.unCheck {
+  display: flex !important;
+  transition: all .5s linear;
+}
+
+.infor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+
+  .wrap {
+    width: calc(100% - 400px);
+    width: 800px;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    .label {
+      color: #2d2d2d;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .span {
+      color: #2d2d2d;
+      font-size: 13px;
+      line-height: 24px;
+    }
+
+    .totalPrice {
+      color: #0066cc;
+    }
+  }
+}
+
 .input {
   padding: 5px 0 5px 10px;
   border-radius: 4px;
@@ -21,13 +68,16 @@
     border-color: #ccc;
   }
 }
-.reset{
+
+.reset {
   background-color: transparent;
   border-color: transparent;
-  &:hover{
+
+  &:hover {
     color: #0066cc;
   }
 }
+
 .btnFind {
   border-color: #ccc;
   border-radius: 4px;
@@ -36,5 +86,14 @@
     background-color: #0066cc;
     border-color: #0066cc;
     color: #fff;
+  }
+}
+
+.selectCategory {
+  max-width: 300px;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #ccc;
   }
 }
