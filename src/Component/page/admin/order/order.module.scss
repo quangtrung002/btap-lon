@@ -1,0 +1,40 @@
+.firstLetter {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.label {
+  font-size: 14px;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+.input {
+  padding: 5px 0 5px 10px;
+  border-radius: 4px;
+  border-color: #ccc;
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #ccc;
+  }
+}
+.reset{
+  background-color: transparent;
+  border-color: transparent;
+  &:hover{
+    color: #0066cc;
+  }
+}
+.btnFind {
+  border-color: #ccc;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #0066cc;
+    border-color: #0066cc;
+    color: #fff;
+  }
+}

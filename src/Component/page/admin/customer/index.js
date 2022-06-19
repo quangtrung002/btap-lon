@@ -1,14 +1,19 @@
-import React, { memo, useCallback, useRef, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 
 import clsx from "clsx"
 import style from "./customer.module.scss"
 
 function Customer() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
   const [customer, setCusTomer] = useState(JSON.parse(localStorage.getItem("customer")))
-  const [valueInputFind, setValueInputFind] = useState("")
+  const cloneCustomer = JSON.parse(localStorage.getItem("customer"))
   const refInputFind = useRef()
+  
   const handleFindCustomer = (payloadValue) => {
-    const newArray = customer.filter(obj =>
+    const newArray = cloneCustomer.filter(obj =>
       obj.id.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
       || obj.name.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
       || obj.phone.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
@@ -16,6 +21,7 @@ function Customer() {
       || obj.email.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
     )
     setCusTomer(newArray)
+    refInputFind.current.value = ""
   }
   return (
     <div className={clsx(style.customer, "py-3")}>
@@ -26,7 +32,6 @@ function Customer() {
             className={clsx(style.firstLetter, style.input)}
             placeholder='Search ...'
             ref={refInputFind}
-            onChange = {e => setValueInputFind(e.target.value)}
           />
           <button
             className={clsx(style.firstLetter, style.btnFind)}
@@ -35,19 +40,19 @@ function Customer() {
             tìm kiếm
           </button>
         </div>
-        <button className={clsx(style.reset)} onClick = {()=> setCusTomer(JSON.parse(localStorage.getItem("customer")))}>
+        <button className={clsx(style.reset)} onClick={() => setCusTomer(JSON.parse(localStorage.getItem("customer")))}>
           <i class="bi bi-arrow-repeat fs-4"></i>
         </button>
       </div>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col" className='text-center'>STT</th>
-            <th scope="col" className='text-center'>Name</th>
-            <th scope="col" className='text-center'>Phone</th>
-            <th scope="col" className='text-center'>Address</th>
-            <th scope="col" className='text-center'>Email</th>
-            <th scope="col" className='text-center'>Đã mua</th>
+            <th scope="col" className='text-center text-capitalize'>mã user</th>
+            <th scope="col" className='text-center text-capitalize'>họ tên</th>
+            <th scope="col" className='text-center text-capitalize'>số điện thoại</th>
+            <th scope="col" className='text-center text-capitalize'>địa chỉ</th>
+            <th scope="col" className='text-center text-capitalize'>email</th>
+            <th scope="col" className='text-center text-capitalize'>đã mua</th>
           </tr>
         </thead>
         <tbody>
