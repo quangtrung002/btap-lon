@@ -2,6 +2,7 @@ import React, { memo, useState, useRef, useEffect } from 'react'
 
 import clsx from 'clsx'
 import style from "./order.module.scss"
+import InforOrder from './inforOrder'
 
 function Order() {
   useEffect(() => {
@@ -9,8 +10,36 @@ function Order() {
   }, [])
 
   const [order, setOrder] = useState(JSON.parse(localStorage.getItem("customer")))
+  const [indexInfor, setIndexInfor] = useState(0)
+  const [checked, setChecked] = useState(false)
+  const [key, setKey] = useState(0)
   const cloneOrder = JSON.parse(localStorage.getItem("customer"))
   const refInputFind = useRef()
+
+  let categorys = []
+  cloneOrder.forEach(obj => {
+    categorys.push(...obj.sold.map(item => item.category.toLowerCase()))
+  })
+
+  const handleSelectCategory = (payloadValue) => {
+    let newArray = []
+    if (payloadValue.toLowerCase() === "danh mục") {
+      setOrder(cloneOrder)
+    }
+    else {
+      cloneOrder.forEach(obj => {
+        obj.sold.map(item => {
+          if (payloadValue.toLowerCase() === item.category.toLowerCase()) {
+            newArray.push({
+              ...obj,
+              sold: [item]
+            })
+          }
+        })
+      })
+      setOrder(newArray)
+    }
+  }
 
   const handleFindCustomer = (payloadValue) => {
     let newArray = []
@@ -23,8 +52,8 @@ function Order() {
           || item.dayBuy.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
           || item.amount.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())) {
           newArray.push({
-            ... obj,
-            sold : [item]
+            ...obj,
+            sold: [item]
           })
         }
       })
@@ -32,34 +61,46 @@ function Order() {
     setOrder(newArray)
     refInputFind.current.value = ""
   }
+
   return (
     <div className={clsx(style.order, "py-3")}>
-      <h1 className={clsx(style.heading, " mb-3 fs-4 text-center fw-bold text-uppercase")}>quản lý đơn hàng</h1>
-      <div className='d-flex justify-content-between mb-3'>
-        <div className='d-flex justify-content-start gap-2 mb-3'>
-          <input
-            className={clsx(style.firstLetter, style.input)}
-            placeholder='Search ...'
-            ref={refInputFind}
-          />
+      <h1 className={clsx(style.heading, " mb-5 fs-1 text-center fw-bold text-uppercase")}>quản lý đơn hàng</h1>
+      <div className='d-flex justify-content-between align-items-center mb-4'>
+        <select
+          className={clsx(style.selectCategory, style.firstLetter, "form-select")}
+          aria-label="Default select example"
+          onChange={e => handleSelectCategory(e.target.value)}
+        >
+          {["Danh mục", ... new Set(categorys)].map((category, index) => (
+            <option value={category}>{category}</option>
+          ))}
+        </select>
+        <div className="d-flex gap-3">
+          <div className='d-flex justify-content-start gap-2'>
+            <input
+              className={clsx(style.firstLetter, style.input)}
+              placeholder='Search ...'
+              ref={refInputFind}
+            />
+            <button
+              className={clsx(style.firstLetter, style.btnFind)}
+              onClick={() => handleFindCustomer(refInputFind.current.value)}
+            >
+              tìm kiếm
+            </button>
+          </div>
           <button
-            className={clsx(style.firstLetter, style.btnFind)}
-            onClick={() => handleFindCustomer(refInputFind.current.value)}
+            className={clsx(style.reset)}
+            onClick={() => setOrder(JSON.parse(localStorage.getItem("customer")))}
           >
-            tìm kiếm
+            <i class="bi bi-arrow-repeat fs-4"></i>
           </button>
         </div>
-        <button
-          className={clsx(style.reset)}
-          onClick={() => setOrder(JSON.parse(localStorage.getItem("customer")))}
-        >
-          <i class="bi bi-arrow-repeat fs-4"></i>
-        </button>
       </div>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col" className='text-center text-capitalize'>mã user</th>
+            <th scope="col" className='text-center text-capitalize'>mã đơn hàng</th>
             <th scope="col" className='text-center text-capitalize'>tên sản phẩm</th>
             <th scope="col" className='text-center text-capitalize'>màu sắc</th>
             <th scope="col" className='text-center text-capitalize'>dung lượng</th>
@@ -69,19 +110,22 @@ function Order() {
           </tr>
         </thead>
         <tbody>
-          {order.map(obj => {
+          {order.map((obj, key) => {
             return (
               <>
-                {obj.sold.map((item, index) => (
-                  <tr key={index}>
-                    <td className={clsx(style.label)}>{obj.id}</td>
+                {obj.sold.map(item => (
+                  <tr key={item.idProduct}>
+                    <td className={clsx(style.label)}>{item.idProduct}</td>
                     <td className={clsx(style.label)}>{item.nameProduct}</td>
                     <td className={clsx(style.label)}>{item.color}</td>
                     <td className={clsx(style.label)}>{item.capacity}</td>
                     <td className={clsx(style.label)}>{item.dayBuy}</td>
                     <td className={clsx(style.label)}>{item.amount}</td>
                     <td className={clsx(style.label)}>
-                      <i class="bi bi-pencil-square"></i>
+                      <i
+                        className={clsx(style.btnInforOrder, "bi bi-pencil-square")}
+                        onClick={() => { setChecked(true); setKey(key) }}
+                      ></i>
                     </td>
                   </tr>
                 ))}
@@ -90,6 +134,11 @@ function Order() {
           })}
         </tbody>
       </table>
+      <InforOrder
+        order={order[key]}
+        checked={checked}
+        setChecked={setChecked}
+      />
     </div>
   )
 }

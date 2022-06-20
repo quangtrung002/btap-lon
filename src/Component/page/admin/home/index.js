@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+<<<<<<< HEAD
 // import { Bar } from "react-chartjs-2"
 function Home() {
   // const data = {
@@ -26,9 +27,19 @@ function Home() {
   //       borderWidth: 1,
   //     },]
   // }
+=======
+import clsx from 'clsx'
+import style from "./home.module.scss"
+
+function Home() {
+
+>>>>>>> 5b496765aa95effd456143ff041d19345b6333d6
   return (
-    <div>
-      home
+    <div className={clsx(style.home, "py-3")}>
+      <h1 className={clsx(style.heading, " mb-5 fs-1 text-center fw-bold text-uppercase")}>thống kê</h1>
+      <div className={clsx("mb-4")}>
+        
+      </div>
     </div>
   )
 }

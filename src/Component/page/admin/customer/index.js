@@ -11,7 +11,7 @@ function Customer() {
   const [customer, setCusTomer] = useState(JSON.parse(localStorage.getItem("customer")))
   const cloneCustomer = JSON.parse(localStorage.getItem("customer"))
   const refInputFind = useRef()
-  
+
   const handleFindCustomer = (payloadValue) => {
     const newArray = cloneCustomer.filter(obj =>
       obj.id.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
@@ -25,8 +25,8 @@ function Customer() {
   }
   return (
     <div className={clsx(style.customer, "py-3")}>
-      <h1 className={clsx(style.heading, " mb-3 fs-4 text-center fw-bold text-uppercase")}>quản lý khách hàng</h1>
-      <div className='d-flex justify-content-between mb-3'>
+      <h1 className={clsx(style.heading, " mb-5 fs-1 text-center fw-bold text-uppercase")}>quản lý khách hàng</h1>
+      <div className='d-flex justify-content-between mb-4'>
         <div className='d-flex justify-content-start gap-2 mb-3'>
           <input
             className={clsx(style.firstLetter, style.input)}
@@ -56,19 +56,24 @@ function Customer() {
           </tr>
         </thead>
         <tbody>
-          {customer.map(obj => {
-            const sold = obj.sold.reduce((initValue, item) => initValue + item.amount, 0)
-            return (
-              <tr key={obj.id}>
-                <td className={clsx(style.label)}>{obj.id}</td>
-                <td className={clsx(style.label)}>{obj.name}</td>
-                <td className={clsx(style.label)}>{obj.phone}</td>
-                <td className={clsx(style.label)}>{obj.address}</td>
-                <td className={clsx(style.label)}>{obj.email}</td>
-                <td className={clsx(style.label)}>{sold}</td>
-              </tr>
-            )
-          })}
+          {customer.length === 0
+            ? <tr>
+              <td colSpan="6" className='fw-bold fs-6 text-center'>Không tìm thấy người dùng</td>
+            </tr>
+            : customer.map(obj => {
+              const sold = obj.sold.reduce((initValue, item) => initValue + item.amount, 0)
+              return (
+                <tr key={obj.id}>
+                  <td className={clsx(style.label)}>{obj.id}</td>
+                  <td className={clsx(style.label)}>{obj.name}</td>
+                  <td className={clsx(style.label)}>{obj.phone}</td>
+                  <td className={clsx(style.label)}>{obj.address}</td>
+                  <td className={clsx(style.label)}>{obj.email}</td>
+                  <td className={clsx(style.label)}>{sold}</td>
+                </tr>
+              )
+            })
+          }
         </tbody>
       </table>
     </div>
