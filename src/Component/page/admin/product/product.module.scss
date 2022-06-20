@@ -1,0 +1,52 @@
+.firstLetter {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.btn {
+  border-color: #ccc;
+  color: #2d2d2d;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0066cc;
+    color: #fff;
+  }
+}
+
+.product {
+
+  input,
+  button {
+    &:focus {
+      box-shadow: none;
+      border-color: #ccc;
+    }
+  }
+
+  .inputFind {
+    outline: none;
+    border-color: #ccc;
+  }
+
+  .addProduct {
+    border: 1px solid #ccc;
+    background-color: #0066cc;
+    color: #fff;
+    &:hover{
+      opacity: .75;
+    }
+  }
+
+  .img {
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .label{
+    color: #2d2d2d;
+    font-size: 15px;
+  }
+}
