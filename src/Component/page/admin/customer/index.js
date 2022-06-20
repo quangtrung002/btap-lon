@@ -11,7 +11,7 @@ function Customer() {
   const [customer, setCusTomer] = useState(JSON.parse(localStorage.getItem("customer")))
   const cloneCustomer = JSON.parse(localStorage.getItem("customer"))
   const refInputFind = useRef()
-  
+
   const handleFindCustomer = (payloadValue) => {
     const newArray = cloneCustomer.filter(obj =>
       obj.id.toString().toLowerCase().includes(payloadValue.toString().toLowerCase())
@@ -56,19 +56,24 @@ function Customer() {
           </tr>
         </thead>
         <tbody>
-          {customer.map(obj => {
-            const sold = obj.sold.reduce((initValue, item) => initValue + item.amount, 0)
-            return (
-              <tr key={obj.id}>
-                <td className={clsx(style.label)}>{obj.id}</td>
-                <td className={clsx(style.label)}>{obj.name}</td>
-                <td className={clsx(style.label)}>{obj.phone}</td>
-                <td className={clsx(style.label)}>{obj.address}</td>
-                <td className={clsx(style.label)}>{obj.email}</td>
-                <td className={clsx(style.label)}>{sold}</td>
-              </tr>
-            )
-          })}
+          {customer.length === 0
+            ? <tr>
+              <td colSpan="6" className='fw-bold fs-6 text-center'>Không tìm thấy người dùng</td>
+            </tr>
+            : customer.map(obj => {
+              const sold = obj.sold.reduce((initValue, item) => initValue + item.amount, 0)
+              return (
+                <tr key={obj.id}>
+                  <td className={clsx(style.label)}>{obj.id}</td>
+                  <td className={clsx(style.label)}>{obj.name}</td>
+                  <td className={clsx(style.label)}>{obj.phone}</td>
+                  <td className={clsx(style.label)}>{obj.address}</td>
+                  <td className={clsx(style.label)}>{obj.email}</td>
+                  <td className={clsx(style.label)}>{sold}</td>
+                </tr>
+              )
+            })
+          }
         </tbody>
       </table>
     </div>

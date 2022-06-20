@@ -19,7 +19,8 @@
 .product {
 
   input,
-  button {
+  button,
+  select {
     &:focus {
       box-shadow: none;
       border-color: #ccc;
@@ -29,24 +30,39 @@
   .inputFind {
     outline: none;
     border-color: #ccc;
+    max-width: 400px;
+    width: 300px;
+  }
+  .btnFind{
+    width: 100px !important;
   }
 
   .addProduct {
     border: 1px solid #ccc;
     background-color: #0066cc;
     color: #fff;
-    &:hover{
+
+    &:hover {
       opacity: .75;
     }
   }
 
   .img {
-    width: 50px;
+    width: 75px;
     height: 100%;
     object-fit: cover;
   }
-  .label{
+
+  .label {
     color: #2d2d2d;
     font-size: 15px;
+  }
+
+  .btnEdit,
+  .btnDelete {
+    &:hover {
+      color: #0066cc;
+      cursor: pointer;
+    }
   }
 }
