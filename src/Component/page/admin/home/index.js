@@ -1,9 +1,4 @@
 import React, { memo } from 'react'
-<<<<<<< HEAD
-import {Bar} from "react-chartjs-2"
-
-function Home() {
-=======
 // import { Bar } from "react-chartjs-2"
 function Home() {
   // const data = {
@@ -31,7 +26,6 @@ function Home() {
   //       borderWidth: 1,
   //     },]
   // }
->>>>>>> a47fce6d5d39239486b44e97777697df74a74a7d
   return (
     <div>
       home
