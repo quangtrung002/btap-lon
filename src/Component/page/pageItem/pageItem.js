@@ -12,6 +12,8 @@ function PageItem({
   namecardsm,
   imgCardsm2,
   type,
+  setPosts,
+  clonePosts,
 }) {
   useEffect(() => {
     const backToTop = () => {
@@ -19,6 +21,17 @@ function PageItem({
     };
     backToTop();
   }, []);
+
+  const handleSelectPosts = payload => {
+    let newArray
+    if(payload==="tất cả"){
+      newArray = clonePosts
+    }
+    else {
+      newArray = posts.filter(obj=>obj.name.toLowerCase().includes(payload))
+    }
+    setPosts(newArray)
+  }
 
   return (
     <div className={clsx(style.wrap)}>
@@ -114,6 +127,7 @@ function PageItem({
                   type="button"
                   className={clsx(style.Chonkhungnho, "btn")}
                   disabled=""
+                  onClick={()=>handleSelectPosts(item.toLowerCase())}
                   key={index}
                 >
                   {item}

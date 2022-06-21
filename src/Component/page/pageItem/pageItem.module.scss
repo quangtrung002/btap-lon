@@ -69,6 +69,15 @@
         .Chonkhungnho{
             color: #6c757d;
             border-color: transparent;
+            &:focus{
+                border-color: transparent !important;
+                box-shadow: none;
+
+            }
+            &:hover{
+                color: #0066CC;
+                border-bottom: 1px solid #0066CC;
+            }
         }
     }
 
