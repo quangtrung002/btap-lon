@@ -2,6 +2,7 @@ import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 
 import clsx from "clsx"
 import style from "./product.module.scss"
+import Form from './form'
 
 function Product() {
   useEffect(() => {
@@ -14,6 +15,8 @@ function Product() {
   }, [])
 
   const [product, setProduct] = useState(getProdcut())
+  const [check, setCheck] = useState(false)
+  const [key, setKey] = useState(0)
   const refInputFind = useRef()
   const cloneProduct = getProdcut()
   const cloneProduct2 = JSON.parse(localStorage.getItem("data"))
@@ -31,6 +34,10 @@ function Product() {
   const handleSelectProduct = (payload) => {
     if (payload === "danh mục") setProduct(cloneProduct)
     else setProduct(cloneProduct2[`${payload}`])
+  }
+
+  const handleDeleteProduct = (key) => {
+    setProduct(product.filter((obj, index) => index !== key))
   }
 
   return (
@@ -62,7 +69,10 @@ function Product() {
             ))}
           </select>
         </div>
-        <div className={clsx(style.addProduct, style.btn, 'd-flex justify-content-center align-items-center px-2 py-0')}>
+        <div
+          className={clsx(style.addProduct, style.btn, 'd-flex justify-content-center align-items-center px-2 py-0')}
+          onClick={() => setCheck(true)}
+        >
           <span>
             <i class="bi bi-plus fs-4"></i>
           </span>
@@ -106,8 +116,12 @@ function Product() {
                   <td className={clsx(style.label, "d-flex gap-2 justify-content-center align-items-center")}>
                     <i
                       className={clsx(style.btnEdit, "bi bi-pencil-square")}
+                      onClick={() => { setCheck(true); setKey(index) }}
                     ></i>
-                    <i className={clsx(style.btnDelete, "bi bi-x fs-4")}></i>
+                    <i
+                      className={clsx(style.btnDelete, "bi bi-x fs-4")}
+                      onClick={() => handleDeleteProduct(index)}
+                    ></i>
                   </td>
                 </tr>)
               })
@@ -115,6 +129,13 @@ function Product() {
           </tbody>
         </table>
       </div>
+      <Form
+        item={product[key]}
+        type="edit"
+        check={check}
+        setCheck={setCheck}
+        product={product}
+      />
     </div>
   )
 }
