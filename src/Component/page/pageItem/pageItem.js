@@ -37,19 +37,21 @@ function PageItem({
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
                     data-bs-slide-to="0"
-                    class="active"
+                    className={clsx(style.dotSlidemn, "active")}
                     aria-current="true"
                     aria-label="Slide 1"
                   ></button>
                   <button
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
+                    className={clsx(style.dotSlidemn, "active")}
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
                   ></button>
                   <button
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
+                    className={clsx(style.dotSlidemn, "active")}
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                   ></button>
@@ -65,29 +67,41 @@ function PageItem({
                     <img src={pathImg} class="d-block w-100" alt="..." />
                   </div>
                 </div>
+                {/* next 1 */}
                 <button
-                  class="carousel-control-prev"
+                  className={clsx(style.btnnext, "carousel-control-prev")}
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide="prev"
                 >
                   <span
-                    class="carousel-control-prev-icon"
+                    className={clsx(
+                      style.btnnextnho,
+                      "carousel-control-prev-icon"
+                    )}
                     aria-hidden="true"
                   ></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span className={clsx(style.nexticon, "visually-hidden")}>
+                    Previous
+                  </span>
                 </button>
+                {/* next 2 */}
                 <button
-                  class="carousel-control-next"
+                  className={clsx(style.btnnext, "carousel-control-next")}
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide="next"
                 >
                   <span
-                    class="carousel-control-next-icon"
+                    className={clsx(
+                      style.btnnextnho,
+                      "carousel-control-next-icon"
+                    )}
                     aria-hidden="true"
                   ></span>
-                  <span class="visually-hidden">Next</span>
+                  <span className={clsx(style.nexticon, "visually-hidden")}>
+                    Next
+                  </span>
                 </button>
               </div>
             </div>
@@ -98,8 +112,7 @@ function PageItem({
                 <button
                   type="button"
                   className={clsx(
-                    style.Chonkhungnho,
-                    "btn btn-outline-secondary"
+                    style.Chonkhungnho, "btn"
                   )}
                   disabled=""
                   key={index}
@@ -162,6 +175,7 @@ function PageItem({
             </Link>
           ))}
         </div>
+        {/* Card so sánh */}
         <span className={clsx(style.bottomCard, "row ")}>
           {/* cột 1 */}
           <span className={clsx(style.cardngoai, "col-md-6")}>

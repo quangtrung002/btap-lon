@@ -12,6 +12,9 @@ export default function Applewatch() {
         pathImg="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/2022/06/Banner-ThuBaoSuong-Moca.jpg"
         allitem={allitem}
         posts={data.watch}
+        namecardsm="Apple Watch"
+        imgCardsm="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/elementor/thumbs/Image-Standard-6-poaryzxbukt0ks39zdrv1faiedxkt45pepgcunmy26.png"
+        imgCardsm2="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/elementor/thumbs/Image-Standard-7-poarz1t088vl800joel46etfl5ob8id62yrbt7k5pq.png"
       />
     </>
   );
