@@ -11,6 +11,7 @@ function PageItem({
   imgCardsm,
   namecardsm,
   imgCardsm2,
+  type,
 }) {
   useEffect(() => {
     const backToTop = () => {
@@ -111,9 +112,7 @@ function PageItem({
               {allitem.map((item, index) => (
                 <button
                   type="button"
-                  className={clsx(
-                    style.Chonkhungnho, "btn"
-                  )}
+                  className={clsx(style.Chonkhungnho, "btn")}
                   disabled=""
                   key={index}
                 >
@@ -176,57 +175,70 @@ function PageItem({
           ))}
         </div>
         {/* Card so sánh */}
-        <span className={clsx(style.bottomCard, "row ")}>
+        <span className={clsx(style.bottomCard, "row g-3 g-xs-3 g-sm-3 g-md-3 g-lg-4")}>
           {/* cột 1 */}
-          <span className={clsx(style.cardngoai, "col-md-6")}>
-            <div
-              className={clsx(style.cardtrong, "card mb-3 max-width: 540px;")}
-            >
-              <div className={clsx(style.cardnho, "row g-0")}>
-                <div class="col-md-4">
-                  <img src={imgCardsm} alt="ảnh" />
-                </div>
-                <div className={clsx(style.cardchuAll, "col-md-8")}>
-                  <div className={clsx(style.cardchunho, "card-body")}>
-                    <h1 class="card-title">
-                      Tìm {namecardsm}
-                      <br />
-                      phù hợp với bạn
-                    </h1>
-                    <small className="d-flex align-items-center">
-                      So sánh các {namecardsm}
-                      <i class="bi bi-chevron-right"></i>
-                    </small>
+
+          {type !== "not" ? (
+            <>
+              <span className={clsx(style.cardngoai, "col-md-6")}>
+                <div
+                  className={clsx(
+                    style.cardtrong,
+                    "card mb-3 max-width: 540px;"
+                  )}
+                >
+                  <div className={clsx(style.cardnho, "row g-0")}>
+                    <div class="col-md-4">
+                      <img src={imgCardsm} alt="ảnh" />
+                    </div>
+                    <div className={clsx(style.cardchuAll, "col-md-8")}>
+                      <div className={clsx(style.cardchunho, "card-body")}>
+                        <h1 class="card-title">
+                          Tìm {namecardsm}
+                          <br />
+                          phù hợp với bạn
+                        </h1>
+                        <small className="d-flex align-items-center">
+                          So sánh các {namecardsm}
+                          <i class="bi bi-chevron-right"></i>
+                        </small>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </span>
-          {/* Cột số 2 */}
-          <span className={clsx(style.cardngoai, "col-md-6")}>
-            <div
-              className={clsx(style.cardtrong, "card mb-3 max-width: 540px;")}
-            >
-              <div className={clsx(style.cardnho, "row g-0")}>
-                <div class="col-md-4">
-                  <img src={imgCardsm2} alt="ảnh" />
-                </div>
-                <div className={clsx(style.cardchuAll, "col-md-8")}>
-                  <div className={clsx(style.cardchunho, "card-body")}>
-                    <h1 class="card-title">
-                      Phụ kiện {namecardsm}
-                      <br />
-                      thường mua kèm
-                    </h1>
-                    <small className="d-flex align-items-center">
-                      Tìm các phụ kiện {namecardsm}
-                      <i class="bi bi-chevron-right"></i>
-                    </small>
+              </span>
+              {/* Cột số 2 */}
+              <span className={clsx(style.cardngoai, "col-md-6")}>
+                <div
+                  className={clsx(
+                    style.cardtrong,
+                    "card mb-3 max-width: 540px;"
+                  )}
+                >
+                  <div className={clsx(style.cardnho, "row g-0")}>
+                    <div class="col-md-4">
+                      <img src={imgCardsm2} alt="ảnh" />
+                    </div>
+                    <div className={clsx(style.cardchuAll, "col-md-8")}>
+                      <div className={clsx(style.cardchunho, "card-body")}>
+                        <h1 class="card-title">
+                          Phụ kiện {namecardsm}
+                          <br />
+                          thường mua kèm
+                        </h1>
+                        <small className="d-flex align-items-center">
+                          Tìm các phụ kiện {namecardsm}
+                          <i class="bi bi-chevron-right"></i>
+                        </small>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </span>
+              </span>
+            </>
+          ) : (
+            <></>
+          )}
         </span>
       </div>
       <div className={clsx(style.search)}>

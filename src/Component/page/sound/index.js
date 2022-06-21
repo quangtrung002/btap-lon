@@ -12,6 +12,7 @@ export default function Sound() {
         pathImg = "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/2022/04/JBL-banner_Banner-PC-copy-1.jpg"
         allitem={allitem}
         posts = {data.airpods}
+        type = 'not'
       />
     </>
   )
