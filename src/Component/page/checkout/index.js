@@ -1,4 +1,4 @@
-import React, { memo, useContext, useState } from 'react'
+import React, { memo, useContext, useEffect, useState } from 'react'
 import { themeContextApp } from '../../../App'
 
 import clsx from "clsx"
@@ -8,7 +8,11 @@ import InforCart from './component/inforCart'
 import ThanhToan from './component/thanhToan'
 
 function Checkout() {
-  const [,setAmountItems , carts, setCarts] = useContext(themeContextApp)
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+  
+  const [, setAmountItems, carts, setCarts] = useContext(themeContextApp)
   const [activeBtn, setActiveBtn] = useState(1)
 
   return (
@@ -56,7 +60,7 @@ function Checkout() {
               <div className='d-flex flex-column gap-3'>
                 <InforCart carts={carts} />
                 <Form carts={carts} />
-                <ThanhToan setCarts={setCarts} setAmountItems = {setAmountItems} />
+                <ThanhToan setCarts={setCarts} setAmountItems={setAmountItems} />
               </div>
             </div>
           </div>

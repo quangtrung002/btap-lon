@@ -15,6 +15,9 @@ export default function Container() {
       {data.iphone.map((item, index) => (
         <Route key={index} path={`/iphone/${item.id}`} element={<ItemDescription item={item} heading="iphone" />}></Route>
       ))}
+      {data.ipad.map((item, index) => (
+        <Route key={index} path={`/ipad/${item.id}`} element={<ItemDescription item={item} heading="ipad" />}></Route>
+      ))}
     </Routes>
   )
 }

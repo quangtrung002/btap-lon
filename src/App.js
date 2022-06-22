@@ -17,6 +17,7 @@ function App() {
       localStorage.setItem("data", JSON.stringify(data))
       localStorage.setItem("customer", JSON.stringify(customer))
       localStorage.setItem("visiter", JSON.stringify(visiter))
+      localStorage.setItem("products", JSON.stringify([...data.iphone, ...data.mac, ...data.ipad, ...data.watch, ...data.airpods, ...data.accessory]))
     }
     getLocalStorage()
   }, [])

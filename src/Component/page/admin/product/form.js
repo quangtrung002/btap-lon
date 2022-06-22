@@ -1,35 +1,66 @@
-import React, { memo, useRef, useState } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 
 import clsx from 'clsx'
 import style from "./product.module.scss"
 
-function Form({ item, type, check, setCheck, product }) {
-  console.log(item)
-  const { name, price, oldprice, color, capacity } = item
-  const [valueName, setValueName] = useState(name)
-  const [valuePrice, setValuePrice] = useState(price)
-  const [valueOldPrice, setValueOldPrice] = useState(oldprice)
-  const [valueColor, setValueColor] = useState(color)
-  const [valueCapacity, setValueCapacity] = useState(capacity)
+function Form({ item, type, check, setCheck, product, setProduct }) {
+  const [valueName, setValueName] = useState("")
+  const [valuePrice, setValuePrice] = useState("")
+  const [valueOldPrice, setValueOldPrice] = useState("")
+  const [valueColor, setValueColor] = useState("")
+  const [valueCapacity, setValueCapacity] = useState("")
   const refImg = useRef()
 
-  const handleForm = () => {
+  useEffect(() => {
+    const { name, price, oldprice, color, capacity } = item
     if (type === "edit") {
-      const newArray = product.map(obj => {
-        if (obj.name === item.name && obj.id === item.id) {
+      setValueName(name)
+      setValuePrice(price)
+      setValueOldPrice(oldprice)
+      setValueCapacity(capacity)
+      setValueColor(color)
+    }
+    else if (type === "add") {
+      console.log("add")
+      setValueName("")
+      setValuePrice("")
+      setValueOldPrice("")
+      setValueCapacity("")
+      setValueColor("")
+    }
+  }, [item, type])
+
+  const handleForm = () => {
+    let newArray
+    if (type === "edit") {
+      newArray = product.map(obj => {
+        if (obj.name.toLowerCase() === item.name.toLowerCase() && obj.id === item.id) {
           return {
+            ...obj,
             name: valueName,
             price: valuePrice,
             oldprice: valueOldPrice,
-            color: Array.isArray(valueColor) ? valueColor : valueColor.split(","),
             capacity: Array.isArray(valueCapacity) ? valueCapacity : valueCapacity.split(","),
-            ...obj
+            color: Array.isArray(valueColor) ? valueColor : valueColor.split(","),
+            image: /^\s*$/.test(refImg.current.value) ? obj.image : refImg.current.value
           }
         }
-        else return obj
+        return obj
       })
-      console.log(newArray)
     }
+    else if (type === "add") {
+      const newProduct = {
+        id: product.length + 1,
+        name: valueName,
+        price: valuePrice,
+        oldprice: valueOldPrice,
+        capacity: valueCapacity.replace(/\s/g, '').split(","),
+        color: valueColor.replace(/\s/g, '').split(","),
+        image: refImg.current.value
+      }
+      newArray = [newProduct, ...product]
+    }
+    setProduct(newArray)
   }
 
 
@@ -43,12 +74,24 @@ function Form({ item, type, check, setCheck, product }) {
         <div className='d-flex gap-3 flex-column'>
           <div class="form-floating">
             <input
-              type="text" class="form-control" id="floatingText" placeholder="Password"
-              value={name}
+              type="text" class="form-control" id="floatingName" placeholder="Password"
+              value={valueName}
               onChange={e => setValueName(e.target.value)}
             />
-            <label for="floatingText">Tên sản phẩm</label>
+            <label for="floatingName">Tên sản phẩm</label>
           </div>
+          {
+            type === "add"
+              ? <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                  {["iphone", "mac", "ipad", "airpods", "watch", "accessory"].map((obj, index) => (
+                    <option value={obj.toLowerCase()} key={index}>{obj}</option>
+                  ))}
+                </select>
+                <label for="floatingSelect">Danh mục</label>
+              </div>
+              : <></>
+          }
           <div class="mb-3">
             <label for="formFile" class="form-label">Hình ảnh</label>
             <input
@@ -58,35 +101,35 @@ function Form({ item, type, check, setCheck, product }) {
           </div>
           <div class="form-floating">
             <input
-              type="text" class="form-control" id="floatingText" placeholder="Password"
-              value={oldprice}
+              type="text" class="form-control" id="floatingOldPrice" placeholder="Password"
+              value={valueOldPrice}
               onChange={e => setValueOldPrice(e.target.value)}
             />
-            <label for="floatingText">Giá cũ</label>
+            <label for="floatingOldPrice">Giá cũ</label>
           </div>
           <div class="form-floating">
             <input
-              type="text" class="form-control" id="floatingText" placeholder="Password"
-              value={price}
+              type="text" class="form-control" id="floatingPrice" placeholder="Password"
+              value={valuePrice}
               onChange={e => setValuePrice(e.target.value)}
             />
-            <label for="floatingText">Giá mới</label>
+            <label for="floatingPrice">Giá mới</label>
           </div>
           <div class="form-floating">
             <input
-              type="text" class="form-control" id="floatingText" placeholder="Password"
-              value={capacity ? capacity : ""}
+              type="text" class="form-control" id="floatingCapacity" placeholder="Password"
+              value={valueCapacity ? valueCapacity : ""}
               onChange={e => setValueCapacity(e.target.value)}
             />
-            <label for="floatingText">Dung lượng</label>
+            <label for="floatingCapacity">Dung lượng</label>
           </div>
           <div class="form-floating">
             <input
-              type="text" class="form-control" id="floatingText" placeholder="Password"
-              value={color ? color : ""}
+              type="text" class="form-control" id="floatingColor" placeholder="Password"
+              value={valueColor ? valueColor : ""}
               onChange={e => setValueColor(e.target.value)}
             />
-            <label for="floatingText">Màu sắc</label>
+            <label for="floatingColor">Màu sắc</label>
           </div>
         </div>
         <div className='d-flex gap-2 justify-content-end mt-4'>

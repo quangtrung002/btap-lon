@@ -17,10 +17,15 @@ function Product() {
   const [product, setProduct] = useState(getProdcut())
   const [check, setCheck] = useState(false)
   const [key, setKey] = useState(0)
+  const [type, setType] = useState("edit")
   const refInputFind = useRef()
   const cloneProduct = getProdcut()
   const cloneProduct2 = JSON.parse(localStorage.getItem("data"))
   const category = ["Danh mục", "iPhone", "mac", "iPad", "airpods", "watch", "accessory"]
+
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(product))
+  }, [product])
 
   const handleFindProduct = (payload) => {
     const newArray = cloneProduct.filter(obj =>
@@ -29,6 +34,7 @@ function Product() {
       || obj.price.toString().toLowerCase().includes(payload.toString().toLowerCase())
     )
     setProduct(newArray)
+    refInputFind.current.value = ""
   }
 
   const handleSelectProduct = (payload) => {
@@ -71,7 +77,7 @@ function Product() {
         </div>
         <div
           className={clsx(style.addProduct, style.btn, 'd-flex justify-content-center align-items-center px-2 py-0')}
-          onClick={() => setCheck(true)}
+          onClick={() => { setCheck(true); setType("add") }}
         >
           <span>
             <i class="bi bi-plus fs-4"></i>
@@ -116,7 +122,11 @@ function Product() {
                   <td className={clsx(style.label, "d-flex gap-2 justify-content-center align-items-center")}>
                     <i
                       className={clsx(style.btnEdit, "bi bi-pencil-square")}
-                      onClick={() => { setCheck(true); setKey(index) }}
+                      onClick={() => {
+                        setCheck(true);
+                        setKey(index);
+                        setType("edit")
+                      }}
                     ></i>
                     <i
                       className={clsx(style.btnDelete, "bi bi-x fs-4")}
@@ -131,10 +141,11 @@ function Product() {
       </div>
       <Form
         item={product[key]}
-        type="edit"
+        type={type}
         check={check}
         setCheck={setCheck}
         product={product}
+        setProduct={setProduct}
       />
     </div>
   )

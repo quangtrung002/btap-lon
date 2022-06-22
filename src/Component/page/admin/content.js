@@ -43,29 +43,15 @@ function Content() {
           ))}
         </div>
         <div className={clsx(style.logout)}>
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button
+            type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            onClick={() => window.location.reload()}
+          >
             <div className="d-flex gap-2 align-items-center">
               <span className={clsx(style.firstLetter, "text-white-50")}>logout</span>
               <i class="bi bi-box-arrow-right text-white-50"></i>
             </div>
           </button>
-          {/* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Login</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Bạn chắc chắn muốn thoát?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className={clsx(style.col2, "p-3")}>
