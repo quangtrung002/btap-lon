@@ -1,5 +1,4 @@
 import React, { memo, useEffect } from "react";
-
 import clsx from "clsx";
 import style from "./pageItem.module.scss";
 import { Link } from "react-router-dom";
@@ -12,6 +11,9 @@ function PageItem({
   imgCardsm,
   namecardsm,
   imgCardsm2,
+  type,
+  setPosts,
+  clonePosts,
 }) {
   useEffect(() => {
     const backToTop = () => {
@@ -20,6 +22,16 @@ function PageItem({
     backToTop();
   }, []);
 
+  const handleSelectPosts = payload => {
+    let newArray
+    if(payload==="tất cả"){
+      newArray = clonePosts
+    }
+    else {
+      newArray = posts.filter(obj=>obj.name.toLowerCase().includes(payload))
+    }
+    setPosts(newArray)
+  }
 
   return (
     <div className={clsx(style.wrap)}>
@@ -39,19 +51,21 @@ function PageItem({
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
                     data-bs-slide-to="0"
-                    class="active"
+                    className={clsx(style.dotSlidemn, "active")}
                     aria-current="true"
                     aria-label="Slide 1"
                   ></button>
                   <button
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
+                    className={clsx(style.dotSlidemn, "active")}
                     data-bs-slide-to="1"
                     aria-label="Slide 2"
                   ></button>
                   <button
                     type="button"
                     data-bs-target="#carouselExampleIndicators"
+                    className={clsx(style.dotSlidemn, "active")}
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                   ></button>
@@ -67,29 +81,41 @@ function PageItem({
                     <img src={pathImg} class="d-block w-100" alt="..." />
                   </div>
                 </div>
+                {/* next 1 */}
                 <button
-                  class="carousel-control-prev"
+                  className={clsx(style.btnnext, "carousel-control-prev")}
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide="prev"
                 >
                   <span
-                    class="carousel-control-prev-icon"
+                    className={clsx(
+                      style.btnnextnho,
+                      "carousel-control-prev-icon"
+                    )}
                     aria-hidden="true"
                   ></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span className={clsx(style.nexticon, "visually-hidden")}>
+                    Previous
+                  </span>
                 </button>
+                {/* next 2 */}
                 <button
-                  class="carousel-control-next"
+                  className={clsx(style.btnnext, "carousel-control-next")}
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide="next"
                 >
                   <span
-                    class="carousel-control-next-icon"
+                    className={clsx(
+                      style.btnnextnho,
+                      "carousel-control-next-icon"
+                    )}
                     aria-hidden="true"
                   ></span>
-                  <span class="visually-hidden">Next</span>
+                  <span className={clsx(style.nexticon, "visually-hidden")}>
+                    Next
+                  </span>
                 </button>
               </div>
             </div>
@@ -99,11 +125,9 @@ function PageItem({
               {allitem.map((item, index) => (
                 <button
                   type="button"
-                  className={clsx(
-                    style.Chonkhungnho,
-                    "btn btn-outline-secondary"
-                  )}
+                  className={clsx(style.Chonkhungnho, "btn")}
                   disabled=""
+                  onClick={()=>handleSelectPosts(item.toLowerCase())}
                   key={index}
                 >
                   {item}
@@ -164,58 +188,96 @@ function PageItem({
             </Link>
           ))}
         </div>
-        <span className={clsx(style.bottomCard, "row ")}>
+        {/* Card so sánh */}
+        <span className={clsx(style.bottomCard, "row g-3 g-xs-3 g-sm-3 g-md-3 g-lg-4")}>
           {/* cột 1 */}
-          <span className={clsx(style.cardngoai, "col-md-6")}>
-            <div
-              className={clsx(style.cardtrong, "card mb-3 max-width: 540px;")}
-            >
-              <div className={clsx(style.cardnho, "row g-0")}>
-                <div class="col-md-4">
-                  <img src={imgCardsm} alt="ảnh" />
-                </div>
-                <div className={clsx(style.cardchuAll, "col-md-8")}>
-                  <div className={clsx(style.cardchunho, "card-body")}>
-                    <h1 class="card-title">
-                      Tìm {namecardsm}
-                      <br />
-                      phù hợp với bạn
-                    </h1>
-                    <small className="d-flex align-items-center">
-                      So sánh các {namecardsm}
-                      <i class="bi bi-chevron-right"></i>
-                    </small>
+
+          {type !== "not" ? (
+            <>
+              <span className={clsx(style.cardngoai, "col-md-6")}>
+                <div
+                  className={clsx(
+                    style.cardtrong,
+                    "card mb-3 max-width: 540px;"
+                  )}
+                >
+                  <div className={clsx(style.cardnho, "row g-0")}>
+                    <div class="col-md-4">
+                      <img src={imgCardsm} alt="ảnh" />
+                    </div>
+                    <div className={clsx(style.cardchuAll, "col-md-8")}>
+                      <div className={clsx(style.cardchunho, "card-body")}>
+                        <h1 class="card-title">
+                          Tìm {namecardsm}
+                          <br />
+                          phù hợp với bạn
+                        </h1>
+                        <small className="d-flex align-items-center">
+                          So sánh các {namecardsm}
+                          <i class="bi bi-chevron-right"></i>
+                        </small>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </span>
-          {/* Cột số 2 */}
-          <span className={clsx(style.cardngoai, "col-md-6")}>
-            <div
-              className={clsx(style.cardtrong, "card mb-3 max-width: 540px;")}
-            >
-              <div className={clsx(style.cardnho, "row g-0")}>
-                <div class="col-md-4">
-                  <img src={imgCardsm2} alt="ảnh" />
-                </div>
-                <div className={clsx(style.cardchuAll, "col-md-8")}>
-                  <div className={clsx(style.cardchunho, "card-body")}>
-                    <h1 class="card-title">
-                      Phụ kiện {namecardsm}
-                      <br />
-                      thường mua kèm
-                    </h1>
-                    <small className="d-flex align-items-center">
-                      Tìm các phụ kiện {namecardsm}
-                      <i class="bi bi-chevron-right"></i>
-                    </small>
+              </span>
+              {/* Cột số 2 */}
+              <span className={clsx(style.cardngoai, "col-md-6")}>
+                <div
+                  className={clsx(
+                    style.cardtrong,
+                    "card mb-3 max-width: 540px;"
+                  )}
+                >
+                  <div className={clsx(style.cardnho, "row g-0")}>
+                    <div class="col-md-4">
+                      <img src={imgCardsm2} alt="ảnh" />
+                    </div>
+                    <div className={clsx(style.cardchuAll, "col-md-8")}>
+                      <div className={clsx(style.cardchunho, "card-body")}>
+                        <h1 class="card-title">
+                          Phụ kiện {namecardsm}
+                          <br />
+                          thường mua kèm
+                        </h1>
+                        <small className="d-flex align-items-center">
+                          Tìm các phụ kiện {namecardsm}
+                          <i class="bi bi-chevron-right"></i>
+                        </small>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </span>
+              </span>
+            </>
+          ) : (
+            <></>
+          )}
         </span>
+      </div>
+      <div className={clsx(style.search)}>
+        <div className="row">
+          <div className="col">
+            <h1 className={clsx(style.heading, "h3 text-center m-0 p-0")}>
+              đăng ký nhận tin từ ShopDunk
+            </h1>
+            <p className={clsx(style.paragragh, "text-center m-0 p-0")}>
+              thông tin sản phẩm mới nhất và chương trình khuyến mãi
+            </p>
+            <div className={clsx(style.form, "d-flex gap-1")}>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="email của bạn"
+              />
+              <button type="button" class="btn btn-primary">
+                Đăng ký
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

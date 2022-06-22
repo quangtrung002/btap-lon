@@ -12,6 +12,10 @@ export default function Ipad() {
         pathImg = "https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/2022/06/Danh-muc-PC-3-1.jpg"
         allitem={allitem}
         posts = {data.ipad}
+        namecardsm="iPad"
+        imgCardsm="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/elementor/thumbs/Image-Standard-2-poaryqixy8g5cogxi9plchnwgj7wo54e1exi1w0vse.png"
+        imgCardsm2="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/elementor/thumbs/Image-Standard-3-poarysembwipzwe77aiuhh6tnayn3jbupo8h0fy3fy.png"
+
       />
     </>
   )
