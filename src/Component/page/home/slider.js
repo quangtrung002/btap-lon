@@ -17,13 +17,13 @@ function Slider() {
     } else if (slide === 1) setSlide(slider.length)
   }, [slide])
 
-  useEffect(() => {
+  /* useEffect(() => {
     const handleSider = setInterval(() => {
       console.log(slide)
       nextSlide()
     }, 3000)
     return () => clearInterval(handleSider)
-  }, [])
+  }, []) */
 
   return (
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

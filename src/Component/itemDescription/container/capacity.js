@@ -18,7 +18,7 @@ function Capacity({ item }) {
   return (
     <div className={clsx(style.capacity)}>
       <p className={clsx(style.label, style.firstLetter, "fs-6 my-3")}>
-        chọn màu:
+        chọn dung lượng:
         <span className='ms-1'>{activeCapacity.payload}</span>
       </p>
       <div className='d-flex gap-2'>
