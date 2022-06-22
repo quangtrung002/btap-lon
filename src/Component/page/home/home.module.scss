@@ -11,6 +11,8 @@
 }
 
 .main {
+  overflow: hidden;
+
   .dotSlider {
     width: 12px !important;
     height: 12px !important;
@@ -109,24 +111,25 @@
       position: relative;
       border: 1px solid transparent;
       border-radius: 8px;
-      cursor: pointer; 
-      &:hover{
+      cursor: pointer;
+
+      &:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
-  
+
       .cardImg {
         width: 80%;
         height: 100%;
         margin: 0 auto;
         object-fit: cover;
       }
-  
+
       .cardBody {
         position: absolute;
         bottom: 0;
         left: 0;
       }
-  
+
       .cardTitle {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -140,7 +143,7 @@
         line-height: 27px;
         min-height: 54px;
       }
-  
+
       .cardPrice {
         .cardOldPrice {
           color: var(--color-price-old);
@@ -148,14 +151,15 @@
           font-size: 14px;
           line-height: 26px;
         }
-  
+
         .cardNewPrice {
           color: var(--color-price);
           font-size: 15px;
           line-height: 26px;
           font-weight: 700;
         }
-        .dong{
+
+        .dong {
           font-size: 12px;
           position: relative;
           top: -4px;
@@ -163,7 +167,7 @@
           text-decoration: underline;
         }
       }
-  
+
       .cardSale {
         position: absolute;
         top: 10px;
@@ -176,7 +180,7 @@
         font-size: 12px;
         line-height: 1;
       }
-  
+
     }
 
     .allItem {
@@ -213,7 +217,7 @@
   }
 }
 
-@media (min-width : 768px) and (max-width: 991px){
+@media (min-width : 768px) and (max-width: 991px) {
   .main {
     .search {
       .form {
