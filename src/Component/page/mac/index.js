@@ -17,7 +17,7 @@ export default function Mac() {
     <>
       <PageItem
         heading="Mac"
-        pathImg="https://cdn-dgcei.nitrocdn.com/QaFavQVnaqgHtiSsAelwGDKVguOuACXM/assets/static/optimized/rev-991ea96/wp-content/uploads/2022/06/Banner-ThuBaoSuong-Moca.jpg"
+        pathImg="https://shopdunk.com/wp-content/uploads/2022/05/Banner-PC-macbook-air-1.jpg"
         allitem={allitem}
         posts={mac}
         clonePosts = {cloneMac}
