@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import clsx from 'clsx'
 import style from './carts.module.scss'
 
-function Container({ carts, setCarts }) {
+function Container({ amountItems, setAmountItems, carts, setCarts }) {
 
   const handlePrice = useCallback((num) => {
     let resultPrice = ""
@@ -50,6 +50,7 @@ function Container({ carts, setCarts }) {
           return obj
         })
       case "delete":
+        setAmountItems(amountItems - 1)
         return carts.filter(obj => obj.id !== id)
       default:
         throw new Error("Invalid value")
